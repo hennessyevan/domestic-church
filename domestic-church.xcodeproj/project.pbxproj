@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35D1E5F52A996CCE004C9828 /* domestic_churchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5F42A996CCE004C9828 /* domestic_churchApp.swift */; };
+		35D1E5F52A996CCE004C9828 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5F42A996CCE004C9828 /* App.swift */; };
 		35D1E5F72A996CCE004C9828 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5F62A996CCE004C9828 /* Persistence.swift */; };
 		35D1E5FA2A996CCE004C9828 /* domestic_church.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5F82A996CCE004C9828 /* domestic_church.xcdatamodeld */; };
-		35D1E5FC2A996CCE004C9828 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5FB2A996CCE004C9828 /* ContentView.swift */; };
+		35D1E5FC2A996CCE004C9828 /* GameplanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */; };
 		35D1E5FE2A996CCF004C9828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D1E5FD2A996CCF004C9828 /* Assets.xcassets */; };
 		35D1E6022A996CCF004C9828 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D1E6012A996CCF004C9828 /* Preview Assets.xcassets */; };
 		35D1E60C2A996CCF004C9828 /* domestic_churchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E60B2A996CCF004C9828 /* domestic_churchTests.swift */; };
 		35D1E6162A996CCF004C9828 /* domestic_churchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6152A996CCF004C9828 /* domestic_churchUITests.swift */; };
 		35D1E6182A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6172A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift */; };
+		35D1E6282A997148004C9828 /* GameplanSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6272A997148004C9828 /* GameplanSchedule.swift */; };
+		35D1E6292A997148004C9828 /* GameplanSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6272A997148004C9828 /* GameplanSchedule.swift */; };
+		35D1E62D2A99823C004C9828 /* RWMRecurrenceRule in Frameworks */ = {isa = PBXBuildFile; productRef = 35D1E62C2A99823C004C9828 /* RWMRecurrenceRule */; };
+		35D1E62F2A9985E6004C9828 /* GameplanCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E62E2A9985E6004C9828 /* GameplanCard.swift */; };
+		35D1E6312A99874F004C9828 /* Gameplan+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6302A99874F004C9828 /* Gameplan+Extension.swift */; };
+		35D1E6322A99874F004C9828 /* Gameplan+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6302A99874F004C9828 /* Gameplan+Extension.swift */; };
+		35D1E6352A999099004C9828 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = 35D1E6342A999099004C9828 /* SystemColors */; };
+		35D1E6372A999675004C9828 /* GameplanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6362A999675004C9828 /* GameplanForm.swift */; };
+		35D1E6382A999675004C9828 /* GameplanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6362A999675004C9828 /* GameplanForm.swift */; };
+		35D1E6402A99ACDA004C9828 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */; };
+		35D1E6412A99ACDA004C9828 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */; };
+		35D1E6432A99AD35004C9828 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6422A99AD35004C9828 /* ActivityCard.swift */; };
+		35D1E6442A99AD35004C9828 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6422A99AD35004C9828 /* ActivityCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +50,10 @@
 
 /* Begin PBXFileReference section */
 		35D1E5F12A996CCE004C9828 /* domestic-church.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "domestic-church.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		35D1E5F42A996CCE004C9828 /* domestic_churchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domestic_churchApp.swift; sourceTree = "<group>"; };
+		35D1E5F42A996CCE004C9828 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		35D1E5F62A996CCE004C9828 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		35D1E5F92A996CCE004C9828 /* domestic_church.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = domestic_church.xcdatamodel; sourceTree = "<group>"; };
-		35D1E5FB2A996CCE004C9828 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanScreen.swift; sourceTree = "<group>"; };
 		35D1E5FD2A996CCF004C9828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35D1E5FF2A996CCF004C9828 /* domestic_church.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = domestic_church.entitlements; sourceTree = "<group>"; };
 		35D1E6012A996CCF004C9828 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -49,6 +62,12 @@
 		35D1E6112A996CCF004C9828 /* domestic-churchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "domestic-churchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1E6152A996CCF004C9828 /* domestic_churchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domestic_churchUITests.swift; sourceTree = "<group>"; };
 		35D1E6172A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domestic_churchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35D1E6272A997148004C9828 /* GameplanSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanSchedule.swift; sourceTree = "<group>"; };
+		35D1E62E2A9985E6004C9828 /* GameplanCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanCard.swift; sourceTree = "<group>"; };
+		35D1E6302A99874F004C9828 /* Gameplan+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gameplan+Extension.swift"; sourceTree = "<group>"; };
+		35D1E6362A999675004C9828 /* GameplanForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanForm.swift; sourceTree = "<group>"; };
+		35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		35D1E6422A99AD35004C9828 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D1E62D2A99823C004C9828 /* RWMRecurrenceRule in Frameworks */,
+				35D1E6352A999099004C9828 /* SystemColors in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +120,11 @@
 		35D1E5F32A996CCE004C9828 /* domestic-church */ = {
 			isa = PBXGroup;
 			children = (
-				35D1E5F42A996CCE004C9828 /* domestic_churchApp.swift */,
+				35D1E6262A997121004C9828 /* Data */,
+				35D1E6252A99711A004C9828 /* Components */,
+				35D1E6242A997106004C9828 /* Screens */,
+				35D1E5F42A996CCE004C9828 /* App.swift */,
 				35D1E5F62A996CCE004C9828 /* Persistence.swift */,
-				35D1E5FB2A996CCE004C9828 /* ContentView.swift */,
 				35D1E5FD2A996CCF004C9828 /* Assets.xcassets */,
 				35D1E5FF2A996CCF004C9828 /* domestic_church.entitlements */,
 				35D1E5F82A996CCE004C9828 /* domestic_church.xcdatamodeld */,
@@ -135,6 +158,34 @@
 			path = "domestic-churchUITests";
 			sourceTree = "<group>";
 		};
+		35D1E6242A997106004C9828 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */,
+				35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		35D1E6252A99711A004C9828 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				35D1E62E2A9985E6004C9828 /* GameplanCard.swift */,
+				35D1E6362A999675004C9828 /* GameplanForm.swift */,
+				35D1E6422A99AD35004C9828 /* ActivityCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		35D1E6262A997121004C9828 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				35D1E6272A997148004C9828 /* GameplanSchedule.swift */,
+				35D1E6302A99874F004C9828 /* Gameplan+Extension.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +202,10 @@
 			dependencies = (
 			);
 			name = "domestic-church";
+			packageProductDependencies = (
+				35D1E62C2A99823C004C9828 /* RWMRecurrenceRule */,
+				35D1E6342A999099004C9828 /* SystemColors */,
+			);
 			productName = "domestic-church";
 			productReference = 35D1E5F12A996CCE004C9828 /* domestic-church.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +278,10 @@
 				Base,
 			);
 			mainGroup = 35D1E5E82A996CCE004C9828;
+			packageReferences = (
+				35D1E62B2A99823C004C9828 /* XCRemoteSwiftPackageReference "RWMRecurrenceRule" */,
+				35D1E6332A999099004C9828 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */,
+			);
 			productRefGroup = 35D1E5F22A996CCE004C9828 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,9 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35D1E5F52A996CCE004C9828 /* domestic_churchApp.swift in Sources */,
+				35D1E62F2A9985E6004C9828 /* GameplanCard.swift in Sources */,
+				35D1E5F52A996CCE004C9828 /* App.swift in Sources */,
+				35D1E6282A997148004C9828 /* GameplanSchedule.swift in Sources */,
 				35D1E5F72A996CCE004C9828 /* Persistence.swift in Sources */,
-				35D1E5FC2A996CCE004C9828 /* ContentView.swift in Sources */,
+				35D1E6432A99AD35004C9828 /* ActivityCard.swift in Sources */,
+				35D1E5FC2A996CCE004C9828 /* GameplanScreen.swift in Sources */,
+				35D1E6402A99ACDA004C9828 /* HomeScreen.swift in Sources */,
+				35D1E6312A99874F004C9828 /* Gameplan+Extension.swift in Sources */,
+				35D1E6372A999675004C9828 /* GameplanForm.swift in Sources */,
 				35D1E5FA2A996CCE004C9828 /* domestic_church.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +341,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D1E6322A99874F004C9828 /* Gameplan+Extension.swift in Sources */,
+				35D1E6412A99ACDA004C9828 /* HomeScreen.swift in Sources */,
+				35D1E6442A99AD35004C9828 /* ActivityCard.swift in Sources */,
 				35D1E60C2A996CCF004C9828 /* domestic_churchTests.swift in Sources */,
+				35D1E6382A999675004C9828 /* GameplanForm.swift in Sources */,
+				35D1E6292A997148004C9828 /* GameplanSchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +690,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		35D1E62B2A99823C004C9828 /* XCRemoteSwiftPackageReference "RWMRecurrenceRule" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexandre67fr/RWMRecurrenceRule";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		35D1E6332A999099004C9828 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diniska/swiftui-system-colors";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		35D1E62C2A99823C004C9828 /* RWMRecurrenceRule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35D1E62B2A99823C004C9828 /* XCRemoteSwiftPackageReference "RWMRecurrenceRule" */;
+			productName = RWMRecurrenceRule;
+		};
+		35D1E6342A999099004C9828 /* SystemColors */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35D1E6332A999099004C9828 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */;
+			productName = SystemColors;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		35D1E5F82A996CCE004C9828 /* domestic_church.xcdatamodeld */ = {
