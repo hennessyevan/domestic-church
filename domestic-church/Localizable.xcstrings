@@ -1,0 +1,147 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+
+    },
+    "Are you sure you want to delete this gameplan?" : {
+
+    },
+    "bibleInAYear" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bible in a Year"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+
+    },
+    "Check In" : {
+
+    },
+    "conjugalPrayer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couple Prayer"
+          }
+        }
+      }
+    },
+    "custom" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom"
+          }
+        }
+      }
+    },
+    "Custom %@" : {
+
+    },
+    "dailyGospel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daily Gospel"
+          }
+        }
+      }
+    },
+    "Day of Week" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete Gameplan" : {
+
+    },
+    "Done" : {
+
+    },
+    "Enter some text" : {
+
+    },
+    "familyPrayer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Family Prayer"
+          }
+        }
+      }
+    },
+    "Frequency" : {
+
+    },
+    "Gameplan" : {
+
+    },
+    "Home" : {
+
+    },
+    "Next" : {
+
+    },
+    "personalPrayer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personal Prayer"
+          }
+        }
+      }
+    },
+    "Press + to add a gameplan" : {
+
+    },
+    "scripture" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scripture"
+          }
+        }
+      }
+    },
+    "Source" : {
+
+    },
+    "Today" : {
+
+    },
+    "Week %lld of %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Week %1$lld of %2$@"
+          }
+        }
+      }
+    },
+    "What type?" : {
+
+    }
+  },
+  "version" : "1.0"
+}

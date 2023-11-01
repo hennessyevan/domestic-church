@@ -5,13 +5,14 @@
 //  Created by Evan Hennessy on 2023-08-25.
 //
 
+import Combine
+import SwiftData
 import SwiftUI
 
 @main
 struct domestic_churchApp: App {
-	let persistenceController = PersistenceController.shared
-
 	@State var selection = "home"
+	@StateObject var romcal = Romcal()
 
 	var body: some Scene {
 		WindowGroup {
@@ -30,7 +31,8 @@ struct domestic_churchApp: App {
 						Label("Gameplan", systemImage: "list.bullet.rectangle.portrait.fill")
 					}.tag("gameplan")
 			}
-			.environment(\.managedObjectContext, persistenceController.container.viewContext)
+			.environmentObject(romcal)
+			.modelContainer(for: [Gameplan.self])
 		}
 	}
 }

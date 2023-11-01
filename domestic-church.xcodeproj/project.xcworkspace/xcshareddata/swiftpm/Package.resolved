@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "rwmrecurrencerule",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alexandre67fr/RWMRecurrenceRule",
+      "state" : {
+        "branch" : "master",
+        "revision" : "2272152ff5aa78a12b45be981ee9889ae89aa752"
+      }
+    },
+    {
+      "identity" : "swiftui-system-colors",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/diniska/swiftui-system-colors",
+      "state" : {
+        "revision" : "5127afab23337699a714e036588f02d9481ae612",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swipeactions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/c-villain/SwipeActions",
+      "state" : {
+        "revision" : "39c6d7f686746881adb3d44638ec330acbeb4f37",
+        "version" : "0.3.3"
+      }
+    },
+    {
+      "identity" : "swxmlhash",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/drmohundro/SWXMLHash",
+      "state" : {
+        "revision" : "a853604c9e9a83ad9954c7e3d2a565273982471f",
+        "version" : "7.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}

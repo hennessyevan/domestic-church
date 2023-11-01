@@ -5,77 +5,66 @@
 //  Created by Evan Hennessy on 2023-08-25.
 //
 
-import Combine
-import CoreData
-import RWMRecurrenceRule
-import SwiftUI
 import EventKit
+import Observation
+import RWMRecurrenceRule
+import SwiftData
+import SwiftUI
 
-class GameplanFormModel: ObservableObject {
-	@Published var frequency: EKRecurrenceFrequency = .weekly
-	@Published var byDayOfWeek: EKWeekday = .tuesday
-	@Published var source: String? = ""
-
-	private var gameplan: Gameplan
-
-	init(gameplan: Gameplan) {
-		self.gameplan = gameplan
-		mapPublishedToCoreDataProperties()
-	}
-
-	private func mapPublishedToCoreDataProperties() {
-		Publishers.CombineLatest($frequency, $byDayOfWeek)
-			.map { frequency, byDayOfWeek in
-				return EKRecurrenceRule(recurrenceWith: frequency, interval: 1, daysOfTheWeek: [EKRecurrenceDayOfWeek(byDayOfWeek)], daysOfTheMonth: nil, monthsOfTheYear: nil, weeksOfTheYear: nil, daysOfTheYear: nil, setPositions: nil, end: nil).rrule!
-			}
-			.sink { [weak self] ruleString in
-				self?.gameplan.rrule = ruleString
-				self?.saveContext()
-			}
-			.store(in: &cancellables)
-		$source.assign(to: \.source, on: gameplan).store(in: &cancellables)
-	}
-
-	private var cancellables: Set<AnyCancellable> = []
-
-	private func saveContext() {
-		do {
-			try PersistenceController.shared.container.viewContext.save()
-		} catch {
-			// Handle the error appropriately
-			print("Error saving context: \(error)")
-		}
-	}
+protocol FormSettings {
+	var sources: [Source] { get }
 }
+
+struct DefaultFormSettings: FormSettings {
+	var sources: [Source] = []
+}
+
+struct ScriptureFormSettings: FormSettings {
+	var sources: [Source] = [.dailyGospel, .bibleInAYear]
+}
+
+struct PersonalPrayerFormSettings: FormSettings {
+	var sources: [Source] = [.custom]
+}
+
+var formSettingsForActivityType: [ActivityType: FormSettings] = [
+	.scripture: ScriptureFormSettings(),
+	.personalPrayer: PersonalPrayerFormSettings(),
+]
 
 private let SPACING: CGFloat = 8
 
 struct GameplanForm: View {
-	var gameplan: Gameplan
-	@ObservedObject var form: GameplanFormModel
+	@Environment(\.modelContext) private var modelContext
+	@Bindable var gameplan: Gameplan
+
+	@State private var showCustomSourceEditor = false
+
+	var settings: any FormSettings
 
 	init(gameplan: Gameplan) {
 		self.gameplan = gameplan
-		self.form = GameplanFormModel(gameplan: gameplan)
+		self.settings = formSettingsForActivityType[gameplan.activityType] ?? DefaultFormSettings()
 	}
 
 	var body: some View {
 		VStack(alignment: .leading, spacing: 30) {
 			VStack(alignment: .leading, spacing: SPACING) {
 				Label("Frequency", systemImage: "clock.arrow.circlepath").labelStyle(.titleOnly).fontWeight(.medium)
-				Picker("Frequency", selection: $form.frequency) {
+				Picker("Frequency", selection: $gameplan.frequency) {
 					ForEach([EKRecurrenceFrequency.daily,
 					         EKRecurrenceFrequency.weekly,
-					         EKRecurrenceFrequency.monthly], id: \.self) { frequency in
+					         EKRecurrenceFrequency.monthly], id: \.self)
+					{ frequency in
 						Text(recurrenceFrequencyToString(frequency).capitalized).tag(frequency)
 					}
 				}.pickerStyle(.segmented)
 			}
 
-			if form.frequency != .daily {
+			if gameplan.frequency != .daily {
 				VStack(alignment: .leading, spacing: SPACING) {
 					Label("Day of Week", systemImage: "calendar").labelStyle(.titleOnly).fontWeight(.medium)
-					Picker("Day of Week", selection: $form.byDayOfWeek) {
+					Picker("Day of Week", selection: $gameplan.byDayOfWeek) {
 						ForEach([
 							EKWeekday.sunday,
 							EKWeekday.monday,
@@ -91,14 +80,72 @@ struct GameplanForm: View {
 					}.pickerStyle(.segmented)
 				}
 			}
+
+			if !settings.sources.isEmpty {
+				VStack(alignment: .leading, spacing: SPACING) {
+					Label("Source", systemImage: "clock.arrow.circlepath").labelStyle(.titleOnly).fontWeight(.medium)
+
+					HStack {
+						Picker("Source", selection: $gameplan.source) {
+							ForEach(settings.sources) { source in
+								Text(source.rawValue.localized).tag(source)
+							}
+						}
+
+						if gameplan.source == .custom {
+							Spacer()
+							Button(action: { showCustomSourceEditor = true }) {
+								Label(
+									title: { Text("Edit".uppercased()) },
+									icon: { Image(systemName: "chevron.right") }
+								).labelStyle(TrailingIconLabelStyle())
+							}
+							.buttonStyle(BorderedButtonStyle())
+							.font(.caption)
+						}
+					}
+				}
+			}
 		}
+		.sheet(isPresented: $showCustomSourceEditor, content: {
+			NavigationView {
+				Form {
+					VStack {
+						ZStack(alignment: .topLeading) {
+							TextEditor(text: $gameplan.customSourceText)
+								.frame(minHeight: 100)
+
+							if gameplan.customSourceText.isEmpty {
+								Text("Enter some text")
+									.foregroundColor(Color(.placeholderText))
+									.padding(.horizontal, 4)
+									.padding(.vertical, 8)
+							}
+						}
+					}
+					.navigationBarTitleDisplayMode(.inline)
+					.navigationTitle("Custom \(gameplan.activityType.rawValue.localized)")
+				}
+				.toolbar {
+					ToolbarItem(placement: .confirmationAction) {
+						Button(action: { showCustomSourceEditor = false }) {
+							Label("Done", systemImage: "checkmark")
+								.labelStyle(TitleOnlyLabelStyle())
+						}
+					}
+				}
+			}
+		})
+		.tint(TYPE_COLORS[gameplan.activityType])
 	}
 }
 
-struct GameplanForm_Previews: PreviewProvider {
-	static var previews: some View {
-		if let gameplan = PersistenceController.fetchFirstGameplan(viewContext: PersistenceController.preview.container.viewContext) {
-			GameplanForm(gameplan: gameplan)
-		}
-	}
+#Preview {
+	let config = ModelConfiguration(isStoredInMemoryOnly: true)
+	let container = try! ModelContainer(for: Gameplan.self, configurations: config)
+
+	let gameplan = Gameplan(activityType: .personalPrayer, source: .custom)
+	container.mainContext.insert(gameplan)
+
+	return GameplanForm(gameplan: gameplan)
 }

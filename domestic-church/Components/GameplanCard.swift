@@ -5,25 +5,14 @@
 //  Created by Evan Hennessy on 2023-08-25.
 //
 
+import SwiftData
 import SwiftUI
 import SystemColors
 
-let TYPE_TITLES: [Gameplan.ActivityType: String] = [
-	.scripture: "Scripture"
-]
-
-let TYPE_COLORS: [Gameplan.ActivityType: Color] = [
-	.scripture: Color("scripture")
-]
-
-let TYPE_ICONS: [Gameplan.ActivityType: String] = [
-	.scripture: "book.closed.fill"
-]
-
 struct GameplanCard: View {
 	var gameplan: Gameplan
-	
-	var type: Gameplan.ActivityType { self.gameplan.wrappedActivityType }
+
+	var type: ActivityType { self.gameplan.activityType }
 
 	@State private var expanded = false
 
@@ -41,41 +30,49 @@ struct GameplanCard: View {
 					.rotationEffect(Angle(degrees: expanded ? 90 : 0))
 				Spacer()
 			}
-			.frame(minWidth: 0, maxWidth: .infinity)
-#if os(iOS)
-			.background(Color.systemBackground)
-#endif
+			.padding(.vertical, 8)
+			.contentShape(Rectangle())
 			.onTapGesture { withAnimation { expanded.toggle() } }
-			
 
 			if expanded {
 				Divider()
-				Spacer().frame(height: 20)
 				GameplanForm(gameplan: gameplan)
+					.padding(.vertical, 8)
 			}
 		}
-		.padding(.all, 24)
+		.padding(.all)
 		.frame(minWidth: 100, idealWidth: .infinity, maxWidth: .infinity)
-#if os(iOS)
-		.background(Color.systemBackground)
-#endif
-		.cornerRadius(16)
-		.shadow(color: .systemGray.opacity(0.2), radius: 2, x: 0, y: 0)
-		.shadow(color: .gray.opacity(0.24), radius: 5, x: 0, y: 5)
+		#if os(iOS)
+			.background(Color.secondarySystemGroupedBackground)
+		#endif
+			.cornerRadius(12)
 	}
 }
 
-struct GameplanCard_Previews: PreviewProvider {
-	static var previews: some View {
-		if let gameplan = PersistenceController.fetchFirstGameplan(viewContext: PersistenceController.preview.container.viewContext) {
-			VStack {
+#Preview {
+	do {
+		let config = ModelConfiguration(isStoredInMemoryOnly: true)
+		let container = try ModelContainer(for: Gameplan.self, configurations: config)
+
+		let examples = [
+			Gameplan(activityType: .scripture),
+			Gameplan(activityType: .personalPrayer),
+			Gameplan(activityType: .conjugalPrayer),
+			Gameplan(activityType: .familyPrayer)
+		]
+
+		return VStack {
+			ForEach(examples, id: \.activityType) { gameplan in
 				GameplanCard(gameplan: gameplan)
+					.modelContainer(container)
 			}
-			.padding(.all)
-			.frame(minHeight: 0, maxHeight: .infinity)
-#if os(iOS)
-			.background(Color(uiColor: UIColor.systemGroupedBackground))
-#endif
 		}
+		.padding(.all)
+		.frame(minHeight: 0, maxHeight: .infinity)
+		#if os(iOS)
+			.background(Color(uiColor: UIColor.systemGroupedBackground))
+		#endif
+	} catch {
+		fatalError("Fatal Error")
 	}
 }

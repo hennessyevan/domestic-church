@@ -7,9 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35379F952AD61A6E00999E19 /* Gameplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F942AD61A6E00999E19 /* Gameplan.swift */; };
+		35379F962AD61A6E00999E19 /* Gameplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F942AD61A6E00999E19 /* Gameplan.swift */; };
+		35379F992AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */; };
+		35379F9A2AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */; };
+		3549B94D2AE7664A00736796 /* ordo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3549B94C2AE7664A00736796 /* ordo.json */; };
+		3549B94F2AE76B5A00736796 /* Ordo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549B94E2AE76B5A00736796 /* Ordo.swift */; };
+		3549B9512AE76DBF00736796 /* rsv.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3549B9502AE76DBF00736796 /* rsv.xml */; };
+		3549B95A2AE84F0B00736796 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = 3549B9592AE84F0B00736796 /* SWXMLHash */; };
+		3549B95F2AE85DB100736796 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 3549B95E2AE85DB100736796 /* SwipeActions */; };
+		354B635B2AD08BCF00CC687A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 354B635A2AD08BCF00CC687A /* Localizable.xcstrings */; };
+		35587F6D2AD79F4300569112 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35587F6C2AD79F4300569112 /* String+Extensions.swift */; };
+		358B11032A9AFC9B00A5A784 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B11022A9AFC9B00A5A784 /* ActivityView.swift */; };
+		35A458D92AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458D82AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift */; };
+		35A458DB2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */; };
+		35A458DD2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DC2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift */; };
+		35A458DF2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */; };
 		35D1E5F52A996CCE004C9828 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5F42A996CCE004C9828 /* App.swift */; };
-		35D1E5F72A996CCE004C9828 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5F62A996CCE004C9828 /* Persistence.swift */; };
-		35D1E5FA2A996CCE004C9828 /* domestic_church.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5F82A996CCE004C9828 /* domestic_church.xcdatamodeld */; };
 		35D1E5FC2A996CCE004C9828 /* GameplanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */; };
 		35D1E5FE2A996CCF004C9828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D1E5FD2A996CCF004C9828 /* Assets.xcassets */; };
 		35D1E6022A996CCF004C9828 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D1E6012A996CCF004C9828 /* Preview Assets.xcassets */; };
@@ -20,15 +34,18 @@
 		35D1E6292A997148004C9828 /* GameplanSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6272A997148004C9828 /* GameplanSchedule.swift */; };
 		35D1E62D2A99823C004C9828 /* RWMRecurrenceRule in Frameworks */ = {isa = PBXBuildFile; productRef = 35D1E62C2A99823C004C9828 /* RWMRecurrenceRule */; };
 		35D1E62F2A9985E6004C9828 /* GameplanCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E62E2A9985E6004C9828 /* GameplanCard.swift */; };
-		35D1E6312A99874F004C9828 /* Gameplan+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6302A99874F004C9828 /* Gameplan+Extension.swift */; };
-		35D1E6322A99874F004C9828 /* Gameplan+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6302A99874F004C9828 /* Gameplan+Extension.swift */; };
+		35D1E6312A99874F004C9828 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6302A99874F004C9828 /* Activity.swift */; };
+		35D1E6322A99874F004C9828 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6302A99874F004C9828 /* Activity.swift */; };
 		35D1E6352A999099004C9828 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = 35D1E6342A999099004C9828 /* SystemColors */; };
 		35D1E6372A999675004C9828 /* GameplanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6362A999675004C9828 /* GameplanForm.swift */; };
-		35D1E6382A999675004C9828 /* GameplanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6362A999675004C9828 /* GameplanForm.swift */; };
 		35D1E6402A99ACDA004C9828 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */; };
-		35D1E6412A99ACDA004C9828 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */; };
 		35D1E6432A99AD35004C9828 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6422A99AD35004C9828 /* ActivityCard.swift */; };
-		35D1E6442A99AD35004C9828 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6422A99AD35004C9828 /* ActivityCard.swift */; };
+		35D1E6462A9A467A004C9828 /* Romcal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6452A9A467A004C9828 /* Romcal.swift */; };
+		35D1E6472A9A467A004C9828 /* Romcal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6452A9A467A004C9828 /* Romcal.swift */; };
+		35F576F12AA2C5E3002B47D6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */; };
+		35F576F32AA2D711002B47D6 /* Canada_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F22AA2D711002B47D6 /* Canada_En.js */; };
+		35F576F52AA2E6D6002B47D6 /* UnitedStates_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F42AA2E6D6002B47D6 /* UnitedStates_En.js */; };
+		35FA96AE2A9DA47F003767EE /* romcal3.js in Resources */ = {isa = PBXBuildFile; fileRef = 35FA96AD2A9DA47F003767EE /* romcal3.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +66,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35379F942AD61A6E00999E19 /* Gameplan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplan.swift; sourceTree = "<group>"; };
+		35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recurrence+Helpers.swift"; sourceTree = "<group>"; };
+		3549B94C2AE7664A00736796 /* ordo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ordo.json; path = ../../../../ordo/ordo.json; sourceTree = "<group>"; };
+		3549B94E2AE76B5A00736796 /* Ordo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ordo.swift; sourceTree = "<group>"; };
+		3549B9502AE76DBF00736796 /* rsv.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = rsv.xml; path = ../../../../ordo/rsv.xml; sourceTree = "<group>"; };
+		354B635A2AD08BCF00CC687A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		35587F6C2AD79F4300569112 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "domestic-church/String+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		358B11022A9AFC9B00A5A784 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		35A458D62AF1E3B200C5F58E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		35A458D82AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
+		35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextEditorStyle.swift; sourceTree = "<group>"; };
+		35A458DC2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryGroupBoxStyle.swift; sourceTree = "<group>"; };
+		35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeConfigurations.swift; sourceTree = "<group>"; };
 		35D1E5F12A996CCE004C9828 /* domestic-church.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "domestic-church.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1E5F42A996CCE004C9828 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		35D1E5F62A996CCE004C9828 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		35D1E5F92A996CCE004C9828 /* domestic_church.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = domestic_church.xcdatamodel; sourceTree = "<group>"; };
 		35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanScreen.swift; sourceTree = "<group>"; };
 		35D1E5FD2A996CCF004C9828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35D1E5FF2A996CCF004C9828 /* domestic_church.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = domestic_church.entitlements; sourceTree = "<group>"; };
@@ -64,10 +92,15 @@
 		35D1E6172A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domestic_churchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		35D1E6272A997148004C9828 /* GameplanSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanSchedule.swift; sourceTree = "<group>"; };
 		35D1E62E2A9985E6004C9828 /* GameplanCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanCard.swift; sourceTree = "<group>"; };
-		35D1E6302A99874F004C9828 /* Gameplan+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gameplan+Extension.swift"; sourceTree = "<group>"; };
+		35D1E6302A99874F004C9828 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		35D1E6362A999675004C9828 /* GameplanForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanForm.swift; sourceTree = "<group>"; };
 		35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		35D1E6422A99AD35004C9828 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		35D1E6452A9A467A004C9828 /* Romcal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Romcal.swift; sourceTree = "<group>"; };
+		35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		35F576F22AA2D711002B47D6 /* Canada_En.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Canada_En.js; sourceTree = "<group>"; };
+		35F576F42AA2E6D6002B47D6 /* UnitedStates_En.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = UnitedStates_En.js; sourceTree = "<group>"; };
+		35FA96AD2A9DA47F003767EE /* romcal3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = romcal3.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3549B95A2AE84F0B00736796 /* SWXMLHash in Frameworks */,
+				3549B95F2AE85DB100736796 /* SwipeActions in Frameworks */,
 				35D1E62D2A99823C004C9828 /* RWMRecurrenceRule in Frameworks */,
 				35D1E6352A999099004C9828 /* SystemColors in Frameworks */,
 			);
@@ -97,6 +132,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35379F972AD61A8A00999E19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35D1E6302A99874F004C9828 /* Activity.swift */,
+				35379F942AD61A6E00999E19 /* Gameplan.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		35A458D72AF1E8A200C5F58E /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				35A458D82AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift */,
+				35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */,
+				35A458DC2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		35D1E5E82A996CCE004C9828 = {
 			isa = PBXGroup;
 			children = (
@@ -120,15 +174,18 @@
 		35D1E5F32A996CCE004C9828 /* domestic-church */ = {
 			isa = PBXGroup;
 			children = (
+				35A458D72AF1E8A200C5F58E /* Styles */,
+				35379F972AD61A8A00999E19 /* Models */,
 				35D1E6262A997121004C9828 /* Data */,
 				35D1E6252A99711A004C9828 /* Components */,
 				35D1E6242A997106004C9828 /* Screens */,
 				35D1E5F42A996CCE004C9828 /* App.swift */,
-				35D1E5F62A996CCE004C9828 /* Persistence.swift */,
 				35D1E5FD2A996CCF004C9828 /* Assets.xcassets */,
 				35D1E5FF2A996CCF004C9828 /* domestic_church.entitlements */,
-				35D1E5F82A996CCE004C9828 /* domestic_church.xcdatamodeld */,
 				35D1E6002A996CCF004C9828 /* Preview Content */,
+				35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */,
+				354B635A2AD08BCF00CC687A /* Localizable.xcstrings */,
+				35A458D62AF1E3B200C5F58E /* Info.plist */,
 			);
 			path = "domestic-church";
 			sourceTree = "<group>";
@@ -163,6 +220,7 @@
 			children = (
 				35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */,
 				35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */,
+				358B11022A9AFC9B00A5A784 /* ActivityView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -173,6 +231,8 @@
 				35D1E62E2A9985E6004C9828 /* GameplanCard.swift */,
 				35D1E6362A999675004C9828 /* GameplanForm.swift */,
 				35D1E6422A99AD35004C9828 /* ActivityCard.swift */,
+				35587F6C2AD79F4300569112 /* String+Extensions.swift */,
+				35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -180,8 +240,15 @@
 		35D1E6262A997121004C9828 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3549B9502AE76DBF00736796 /* rsv.xml */,
+				3549B94C2AE7664A00736796 /* ordo.json */,
 				35D1E6272A997148004C9828 /* GameplanSchedule.swift */,
-				35D1E6302A99874F004C9828 /* Gameplan+Extension.swift */,
+				35D1E6452A9A467A004C9828 /* Romcal.swift */,
+				35FA96AD2A9DA47F003767EE /* romcal3.js */,
+				35F576F22AA2D711002B47D6 /* Canada_En.js */,
+				35F576F42AA2E6D6002B47D6 /* UnitedStates_En.js */,
+				35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */,
+				3549B94E2AE76B5A00736796 /* Ordo.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -205,6 +272,8 @@
 			packageProductDependencies = (
 				35D1E62C2A99823C004C9828 /* RWMRecurrenceRule */,
 				35D1E6342A999099004C9828 /* SystemColors */,
+				3549B9592AE84F0B00736796 /* SWXMLHash */,
+				3549B95E2AE85DB100736796 /* SwipeActions */,
 			);
 			productName = "domestic-church";
 			productReference = 35D1E5F12A996CCE004C9828 /* domestic-church.app */;
@@ -254,7 +323,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					35D1E5F02A996CCE004C9828 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -281,6 +350,8 @@
 			packageReferences = (
 				35D1E62B2A99823C004C9828 /* XCRemoteSwiftPackageReference "RWMRecurrenceRule" */,
 				35D1E6332A999099004C9828 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */,
+				3549B9582AE84F0B00736796 /* XCRemoteSwiftPackageReference "SWXMLHash" */,
+				3549B95D2AE85DB100736796 /* XCRemoteSwiftPackageReference "SwipeActions" */,
 			);
 			productRefGroup = 35D1E5F22A996CCE004C9828 /* Products */;
 			projectDirPath = "";
@@ -299,6 +370,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				35D1E6022A996CCF004C9828 /* Preview Assets.xcassets in Resources */,
+				3549B9512AE76DBF00736796 /* rsv.xml in Resources */,
+				3549B94D2AE7664A00736796 /* ordo.json in Resources */,
+				35FA96AE2A9DA47F003767EE /* romcal3.js in Resources */,
+				354B635B2AD08BCF00CC687A /* Localizable.xcstrings in Resources */,
+				35F576F32AA2D711002B47D6 /* Canada_En.js in Resources */,
+				35F576F52AA2E6D6002B47D6 /* UnitedStates_En.js in Resources */,
 				35D1E5FE2A996CCF004C9828 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,13 +404,22 @@
 				35D1E62F2A9985E6004C9828 /* GameplanCard.swift in Sources */,
 				35D1E5F52A996CCE004C9828 /* App.swift in Sources */,
 				35D1E6282A997148004C9828 /* GameplanSchedule.swift in Sources */,
-				35D1E5F72A996CCE004C9828 /* Persistence.swift in Sources */,
+				35F576F12AA2C5E3002B47D6 /* Date+Extensions.swift in Sources */,
+				35D1E6462A9A467A004C9828 /* Romcal.swift in Sources */,
+				35379F992AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */,
+				35A458DD2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift in Sources */,
+				35379F952AD61A6E00999E19 /* Gameplan.swift in Sources */,
+				358B11032A9AFC9B00A5A784 /* ActivityView.swift in Sources */,
+				35587F6D2AD79F4300569112 /* String+Extensions.swift in Sources */,
 				35D1E6432A99AD35004C9828 /* ActivityCard.swift in Sources */,
+				35A458DB2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift in Sources */,
 				35D1E5FC2A996CCE004C9828 /* GameplanScreen.swift in Sources */,
+				35A458D92AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift in Sources */,
+				3549B94F2AE76B5A00736796 /* Ordo.swift in Sources */,
+				35A458DF2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift in Sources */,
 				35D1E6402A99ACDA004C9828 /* HomeScreen.swift in Sources */,
-				35D1E6312A99874F004C9828 /* Gameplan+Extension.swift in Sources */,
+				35D1E6312A99874F004C9828 /* Activity.swift in Sources */,
 				35D1E6372A999675004C9828 /* GameplanForm.swift in Sources */,
-				35D1E5FA2A996CCE004C9828 /* domestic_church.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,11 +427,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35D1E6322A99874F004C9828 /* Gameplan+Extension.swift in Sources */,
-				35D1E6412A99ACDA004C9828 /* HomeScreen.swift in Sources */,
-				35D1E6442A99AD35004C9828 /* ActivityCard.swift in Sources */,
+				35D1E6322A99874F004C9828 /* Activity.swift in Sources */,
+				35379F9A2AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */,
+				35D1E6472A9A467A004C9828 /* Romcal.swift in Sources */,
 				35D1E60C2A996CCF004C9828 /* domestic_churchTests.swift in Sources */,
-				35D1E6382A999675004C9828 /* GameplanForm.swift in Sources */,
+				35379F962AD61A6E00999E19 /* Gameplan.swift in Sources */,
 				35D1E6292A997148004C9828 /* GameplanSchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,9 +494,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -466,9 +554,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -489,28 +579,34 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "domestic-church/domestic_church.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"domestic-church/Preview Content\"";
 				DEVELOPMENT_TEAM = 4CUBSV9SX3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "domestic-church/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Domestic Church";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hennessyevan.domestic-church";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,28 +623,34 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "domestic-church/domestic_church.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"domestic-church/Preview Content\"";
 				DEVELOPMENT_TEAM = 4CUBSV9SX3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "domestic-church/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Domestic Church";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hennessyevan.domestic-church";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -567,6 +669,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4CUBSV9SX3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -590,6 +693,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4CUBSV9SX3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -612,6 +716,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4CUBSV9SX3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -634,6 +739,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4CUBSV9SX3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -692,6 +798,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3549B9582AE84F0B00736796 /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/drmohundro/SWXMLHash";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.2;
+			};
+		};
+		3549B95D2AE85DB100736796 /* XCRemoteSwiftPackageReference "SwipeActions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/c-villain/SwipeActions";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.3;
+			};
+		};
 		35D1E62B2A99823C004C9828 /* XCRemoteSwiftPackageReference "RWMRecurrenceRule" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alexandre67fr/RWMRecurrenceRule";
@@ -711,6 +833,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3549B9592AE84F0B00736796 /* SWXMLHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3549B9582AE84F0B00736796 /* XCRemoteSwiftPackageReference "SWXMLHash" */;
+			productName = SWXMLHash;
+		};
+		3549B95E2AE85DB100736796 /* SwipeActions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3549B95D2AE85DB100736796 /* XCRemoteSwiftPackageReference "SwipeActions" */;
+			productName = SwipeActions;
+		};
 		35D1E62C2A99823C004C9828 /* RWMRecurrenceRule */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 35D1E62B2A99823C004C9828 /* XCRemoteSwiftPackageReference "RWMRecurrenceRule" */;
@@ -722,19 +854,6 @@
 			productName = SystemColors;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		35D1E5F82A996CCE004C9828 /* domestic_church.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				35D1E5F92A996CCE004C9828 /* domestic_church.xcdatamodel */,
-			);
-			currentVersion = 35D1E5F92A996CCE004C9828 /* domestic_church.xcdatamodel */;
-			path = domestic_church.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 35D1E5E92A996CCE004C9828 /* Project object */;
 }
