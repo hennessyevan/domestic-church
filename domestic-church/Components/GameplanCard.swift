@@ -12,9 +12,11 @@ import SystemColors
 struct GameplanCard: View {
 	var gameplan: Gameplan
 
-	var type: ActivityType { self.gameplan.activityType }
+	var type: ActivityType { gameplan.activityType }
 
-	@State private var expanded = false
+	@Environment(GameplanScreenViewModel.self) private var gameplanScreenViewModel
+
+	var expanded: Bool { gameplanScreenViewModel.expandedId == gameplan.id }
 
 	var body: some View {
 		VStack {
@@ -32,7 +34,9 @@ struct GameplanCard: View {
 			}
 			.padding(.vertical, 8)
 			.contentShape(Rectangle())
-			.onTapGesture { withAnimation { expanded.toggle() } }
+			.onTapGesture { withAnimation(.spring(.snappy)) {
+				gameplanScreenViewModel.expandedId = expanded ? nil : gameplan.id
+			} }
 
 			if expanded {
 				Divider()

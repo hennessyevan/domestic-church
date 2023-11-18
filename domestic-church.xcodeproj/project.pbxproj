@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3526A67C2AF40E2C00903582 /* MarqueeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526A67B2AF40E2C00903582 /* MarqueeText.swift */; };
 		35379F952AD61A6E00999E19 /* Gameplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F942AD61A6E00999E19 /* Gameplan.swift */; };
 		35379F962AD61A6E00999E19 /* Gameplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F942AD61A6E00999E19 /* Gameplan.swift */; };
 		35379F992AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */; };
 		35379F9A2AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */; };
+		353DF1C82B0862A800E6AE93 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 353DF1C72B0862A800E6AE93 /* GRDB */; };
+		353DF1CA2B0876C600E6AE93 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */; };
 		3549B94D2AE7664A00736796 /* ordo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3549B94C2AE7664A00736796 /* ordo.json */; };
 		3549B94F2AE76B5A00736796 /* Ordo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549B94E2AE76B5A00736796 /* Ordo.swift */; };
-		3549B9512AE76DBF00736796 /* rsv.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3549B9502AE76DBF00736796 /* rsv.xml */; };
 		3549B95A2AE84F0B00736796 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = 3549B9592AE84F0B00736796 /* SWXMLHash */; };
 		3549B95F2AE85DB100736796 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 3549B95E2AE85DB100736796 /* SwipeActions */; };
 		354B635B2AD08BCF00CC687A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 354B635A2AD08BCF00CC687A /* Localizable.xcstrings */; };
 		35587F6D2AD79F4300569112 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35587F6C2AD79F4300569112 /* String+Extensions.swift */; };
+		35601CC62B084CF400C3B6C9 /* BibleReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35601CC52B084CF400C3B6C9 /* BibleReader.swift */; };
+		35601CCC2B0858C300C3B6C9 /* nrsvce.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 35601CCB2B0858C300C3B6C9 /* nrsvce.sqlite */; };
 		358B11032A9AFC9B00A5A784 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B11022A9AFC9B00A5A784 /* ActivityView.swift */; };
 		35A458D92AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458D82AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift */; };
 		35A458DB2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */; };
@@ -30,8 +34,6 @@
 		35D1E60C2A996CCF004C9828 /* domestic_churchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E60B2A996CCF004C9828 /* domestic_churchTests.swift */; };
 		35D1E6162A996CCF004C9828 /* domestic_churchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6152A996CCF004C9828 /* domestic_churchUITests.swift */; };
 		35D1E6182A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6172A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift */; };
-		35D1E6282A997148004C9828 /* GameplanSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6272A997148004C9828 /* GameplanSchedule.swift */; };
-		35D1E6292A997148004C9828 /* GameplanSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6272A997148004C9828 /* GameplanSchedule.swift */; };
 		35D1E62D2A99823C004C9828 /* RWMRecurrenceRule in Frameworks */ = {isa = PBXBuildFile; productRef = 35D1E62C2A99823C004C9828 /* RWMRecurrenceRule */; };
 		35D1E62F2A9985E6004C9828 /* GameplanCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E62E2A9985E6004C9828 /* GameplanCard.swift */; };
 		35D1E6312A99874F004C9828 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6302A99874F004C9828 /* Activity.swift */; };
@@ -66,13 +68,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3526A67B2AF40E2C00903582 /* MarqueeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeText.swift; sourceTree = "<group>"; };
 		35379F942AD61A6E00999E19 /* Gameplan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplan.swift; sourceTree = "<group>"; };
 		35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recurrence+Helpers.swift"; sourceTree = "<group>"; };
+		353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		3549B94C2AE7664A00736796 /* ordo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ordo.json; path = ../../../../ordo/ordo.json; sourceTree = "<group>"; };
 		3549B94E2AE76B5A00736796 /* Ordo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ordo.swift; sourceTree = "<group>"; };
-		3549B9502AE76DBF00736796 /* rsv.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = rsv.xml; path = ../../../../ordo/rsv.xml; sourceTree = "<group>"; };
 		354B635A2AD08BCF00CC687A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		35587F6C2AD79F4300569112 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "domestic-church/String+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		35601CC52B084CF400C3B6C9 /* BibleReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReader.swift; sourceTree = "<group>"; };
+		35601CCB2B0858C300C3B6C9 /* nrsvce.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = nrsvce.sqlite; path = ../../../../ordo/bibles/nrsvce.sqlite; sourceTree = "<group>"; };
 		358B11022A9AFC9B00A5A784 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		35A458D62AF1E3B200C5F58E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		35A458D82AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
@@ -90,7 +95,6 @@
 		35D1E6112A996CCF004C9828 /* domestic-churchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "domestic-churchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1E6152A996CCF004C9828 /* domestic_churchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domestic_churchUITests.swift; sourceTree = "<group>"; };
 		35D1E6172A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domestic_churchUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		35D1E6272A997148004C9828 /* GameplanSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanSchedule.swift; sourceTree = "<group>"; };
 		35D1E62E2A9985E6004C9828 /* GameplanCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanCard.swift; sourceTree = "<group>"; };
 		35D1E6302A99874F004C9828 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		35D1E6362A999675004C9828 /* GameplanForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanForm.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3549B95A2AE84F0B00736796 /* SWXMLHash in Frameworks */,
+				353DF1C82B0862A800E6AE93 /* GRDB in Frameworks */,
 				3549B95F2AE85DB100736796 /* SwipeActions in Frameworks */,
 				35D1E62D2A99823C004C9828 /* RWMRecurrenceRule in Frameworks */,
 				35D1E6352A999099004C9828 /* SystemColors in Frameworks */,
@@ -144,6 +149,7 @@
 		35A458D72AF1E8A200C5F58E /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */,
 				35A458D82AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift */,
 				35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */,
 				35A458DC2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift */,
@@ -186,6 +192,7 @@
 				35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */,
 				354B635A2AD08BCF00CC687A /* Localizable.xcstrings */,
 				35A458D62AF1E3B200C5F58E /* Info.plist */,
+				353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */,
 			);
 			path = "domestic-church";
 			sourceTree = "<group>";
@@ -232,7 +239,7 @@
 				35D1E6362A999675004C9828 /* GameplanForm.swift */,
 				35D1E6422A99AD35004C9828 /* ActivityCard.swift */,
 				35587F6C2AD79F4300569112 /* String+Extensions.swift */,
-				35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */,
+				3526A67B2AF40E2C00903582 /* MarqueeText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -240,15 +247,15 @@
 		35D1E6262A997121004C9828 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3549B9502AE76DBF00736796 /* rsv.xml */,
+				35601CCB2B0858C300C3B6C9 /* nrsvce.sqlite */,
 				3549B94C2AE7664A00736796 /* ordo.json */,
-				35D1E6272A997148004C9828 /* GameplanSchedule.swift */,
 				35D1E6452A9A467A004C9828 /* Romcal.swift */,
 				35FA96AD2A9DA47F003767EE /* romcal3.js */,
 				35F576F22AA2D711002B47D6 /* Canada_En.js */,
 				35F576F42AA2E6D6002B47D6 /* UnitedStates_En.js */,
 				35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */,
 				3549B94E2AE76B5A00736796 /* Ordo.swift */,
+				35601CC52B084CF400C3B6C9 /* BibleReader.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -274,6 +281,7 @@
 				35D1E6342A999099004C9828 /* SystemColors */,
 				3549B9592AE84F0B00736796 /* SWXMLHash */,
 				3549B95E2AE85DB100736796 /* SwipeActions */,
+				353DF1C72B0862A800E6AE93 /* GRDB */,
 			);
 			productName = "domestic-church";
 			productReference = 35D1E5F12A996CCE004C9828 /* domestic-church.app */;
@@ -352,6 +360,7 @@
 				35D1E6332A999099004C9828 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */,
 				3549B9582AE84F0B00736796 /* XCRemoteSwiftPackageReference "SWXMLHash" */,
 				3549B95D2AE85DB100736796 /* XCRemoteSwiftPackageReference "SwipeActions" */,
+				353DF1C62B0862A800E6AE93 /* XCRemoteSwiftPackageReference "GRDB" */,
 			);
 			productRefGroup = 35D1E5F22A996CCE004C9828 /* Products */;
 			projectDirPath = "";
@@ -370,12 +379,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				35D1E6022A996CCF004C9828 /* Preview Assets.xcassets in Resources */,
-				3549B9512AE76DBF00736796 /* rsv.xml in Resources */,
 				3549B94D2AE7664A00736796 /* ordo.json in Resources */,
 				35FA96AE2A9DA47F003767EE /* romcal3.js in Resources */,
 				354B635B2AD08BCF00CC687A /* Localizable.xcstrings in Resources */,
 				35F576F32AA2D711002B47D6 /* Canada_En.js in Resources */,
 				35F576F52AA2E6D6002B47D6 /* UnitedStates_En.js in Resources */,
+				35601CCC2B0858C300C3B6C9 /* nrsvce.sqlite in Resources */,
 				35D1E5FE2A996CCF004C9828 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,14 +412,15 @@
 			files = (
 				35D1E62F2A9985E6004C9828 /* GameplanCard.swift in Sources */,
 				35D1E5F52A996CCE004C9828 /* App.swift in Sources */,
-				35D1E6282A997148004C9828 /* GameplanSchedule.swift in Sources */,
 				35F576F12AA2C5E3002B47D6 /* Date+Extensions.swift in Sources */,
 				35D1E6462A9A467A004C9828 /* Romcal.swift in Sources */,
+				35601CC62B084CF400C3B6C9 /* BibleReader.swift in Sources */,
 				35379F992AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */,
 				35A458DD2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift in Sources */,
 				35379F952AD61A6E00999E19 /* Gameplan.swift in Sources */,
 				358B11032A9AFC9B00A5A784 /* ActivityView.swift in Sources */,
 				35587F6D2AD79F4300569112 /* String+Extensions.swift in Sources */,
+				353DF1CA2B0876C600E6AE93 /* Array+Extensions.swift in Sources */,
 				35D1E6432A99AD35004C9828 /* ActivityCard.swift in Sources */,
 				35A458DB2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift in Sources */,
 				35D1E5FC2A996CCE004C9828 /* GameplanScreen.swift in Sources */,
@@ -418,6 +428,7 @@
 				3549B94F2AE76B5A00736796 /* Ordo.swift in Sources */,
 				35A458DF2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift in Sources */,
 				35D1E6402A99ACDA004C9828 /* HomeScreen.swift in Sources */,
+				3526A67C2AF40E2C00903582 /* MarqueeText.swift in Sources */,
 				35D1E6312A99874F004C9828 /* Activity.swift in Sources */,
 				35D1E6372A999675004C9828 /* GameplanForm.swift in Sources */,
 			);
@@ -432,7 +443,6 @@
 				35D1E6472A9A467A004C9828 /* Romcal.swift in Sources */,
 				35D1E60C2A996CCF004C9828 /* domestic_churchTests.swift in Sources */,
 				35379F962AD61A6E00999E19 /* Gameplan.swift in Sources */,
-				35D1E6292A997148004C9828 /* GameplanSchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +808,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		353DF1C62B0862A800E6AE93 /* XCRemoteSwiftPackageReference "GRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		3549B9582AE84F0B00736796 /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/drmohundro/SWXMLHash";
@@ -833,6 +851,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		353DF1C72B0862A800E6AE93 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 353DF1C62B0862A800E6AE93 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
 		3549B9592AE84F0B00736796 /* SWXMLHash */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3549B9582AE84F0B00736796 /* XCRemoteSwiftPackageReference "SWXMLHash" */;

@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "grdb.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/groue/GRDB.swift",
+      "state" : {
+        "branch" : "master",
+        "revision" : "f1f8e8438ad815086b48660ddf87c788f9abe966"
+      }
+    },
+    {
       "identity" : "rwmrecurrencerule",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/alexandre67fr/RWMRecurrenceRule",

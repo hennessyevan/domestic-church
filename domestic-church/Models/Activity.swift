@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Activity: Identifiable {
+struct Activity: Identifiable, Equatable {
 	var id: UUID
 	var activityType: ActivityType
 	var date: Date

@@ -32,7 +32,7 @@ func createRecurrenceRule(frequency: EKRecurrenceFrequency = .weekly, byDayOfWee
 	EKRecurrenceRule(
 		recurrenceWith: frequency,
 		interval: 1,
-		daysOfTheWeek: [EKRecurrenceDayOfWeek(byDayOfWeek)],
+		daysOfTheWeek: frequency == .weekly ? [EKRecurrenceDayOfWeek(byDayOfWeek)] : nil,
 		daysOfTheMonth: nil,
 		monthsOfTheYear: nil,
 		weeksOfTheYear: nil,
@@ -48,6 +48,7 @@ private var defaultRule = createRecurrenceRule(frequency: .weekly, byDayOfWeek: 
 public final class Gameplan {
 	var activityType: ActivityType
 	var rrule: String?
+	var timeOfDay:Date = Date.now
 	var source: Source
 	var createdAt: Date?
 	var customSourceText: String = ""
@@ -63,7 +64,7 @@ public final class Gameplan {
 	}
 
 	private var rruleObject: EKRecurrenceRule {
-		if let rrule = rrule {
+		if let rrule {
 			return EKRecurrenceRule(recurrenceWith: rrule) ?? defaultRule
 		} else {
 			return defaultRule
@@ -91,14 +92,19 @@ public final class Gameplan {
 		if let rrule = rrule, let rules = parser.parse(rule: rrule) {
 			let scheduler = RWMRuleScheduler()
 			let calendar = Calendar.current
-			let startingDate = calendar.date(byAdding: .day, value: -1, to: .now) ?? .now
+			let timeOfDay = calendar.dateComponents([.hour, .minute, .second], from: timeOfDay)
+			let timeAdjustedToday = calendar.date(bySettingHour: timeOfDay.hour!, minute: timeOfDay.minute!, second: 0, of: .now) ?? .now
+			let startingDate = calendar.date(byAdding: .day, value: -2, to: timeAdjustedToday)!
+			let after = calendar.date(byAdding: .hour, value: -2, to: .now)!
 
-			if let date = scheduler.nextDate(after: startingDate, with: rules, startingFrom: startingDate) {
+			if let date = scheduler.nextDate(after: after, with: rules, startingFrom: startingDate) {
 				return Activity(
 					id: UUID(),
 					activityType: activityType,
 					date: date,
-					source: source
+					source: source,
+					customSourceText: customSourceText,
+					customSourceTitle: customSourceTitle
 				)
 			}
 		}

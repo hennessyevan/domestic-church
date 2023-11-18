@@ -61,7 +61,7 @@ struct GameplanForm: View {
 				}.pickerStyle(.segmented)
 			}
 
-			if gameplan.frequency != .daily {
+			if gameplan.frequency == .weekly {
 				VStack(alignment: .leading, spacing: SPACING) {
 					Label("Day of Week", systemImage: "calendar").labelStyle(.titleOnly).fontWeight(.medium)
 					Picker("Day of Week", selection: $gameplan.byDayOfWeek) {
@@ -80,6 +80,8 @@ struct GameplanForm: View {
 					}.pickerStyle(.segmented)
 				}
 			}
+
+			DatePicker("Time of Day", selection: $gameplan.timeOfDay, displayedComponents: .hourAndMinute)
 
 			if !settings.sources.isEmpty {
 				VStack(alignment: .leading, spacing: SPACING) {
@@ -107,20 +109,21 @@ struct GameplanForm: View {
 				}
 			}
 		}
+		.animation(.easeOut, value: gameplan.frequency)
 		.sheet(isPresented: $showCustomSourceEditor, content: {
 			NavigationView {
 				Form {
-					VStack {
-						ZStack(alignment: .topLeading) {
-							TextEditor(text: $gameplan.customSourceText)
-								.frame(minHeight: 100)
+					TextField("Title", text: $gameplan.customSourceTitle)
 
-							if gameplan.customSourceText.isEmpty {
-								Text("Enter some text")
-									.foregroundColor(Color(.placeholderText))
-									.padding(.horizontal, 4)
-									.padding(.vertical, 8)
-							}
+					ZStack(alignment: .topLeading) {
+						TextEditor(text: $gameplan.customSourceText)
+							.frame(minHeight: 100)
+
+						if gameplan.customSourceText.isEmpty {
+							Text("Enter some text")
+								.foregroundColor(Color(.placeholderText))
+								.padding(.horizontal, 4)
+								.padding(.vertical, 8)
 						}
 					}
 					.navigationBarTitleDisplayMode(.inline)

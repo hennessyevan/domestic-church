@@ -15,18 +15,18 @@ struct LiturgicalDayView: View {
 	var body: some View {
 		if let today = romcal.today {
 			HStack {
-				Text("Week \(today.calendar.weekOfSeason) of \(today.seasonNames.first ?? "")")
+				MarqueeText(today.name.isEmpty ? "Week \(today.calendar.weekOfSeason) of \(today.seasonNames.first ?? "")" : today.name)
 					.lineLimit(1)
 					.fontWeight(.semibold)
 					.font(.caption)
 					.fontDesign(.rounded)
 					.textCase(.uppercase)
 
-//				Image(systemName: "chevron.forward")
-//					.font(.system(size: 14))
-//					.foregroundStyle(romcal.color(from: today.colors.first))
+				//				Image(systemName: "chevron.forward")
+				//					.font(.system(size: 14))
+				//					.foregroundStyle(romcal.color(from: today.colors.first))
 
-//				Spacer()
+				//				Spacer()
 			}
 			.frame(minWidth: 100, maxWidth: .infinity)
 			.padding(.all)
@@ -37,16 +37,16 @@ struct LiturgicalDayView: View {
 	}
 }
 
-
 struct HomeScreen: View {
 	@Environment(\.modelContext) private var modelContext
 
 	@Query(sort: \Gameplan.createdAt, order: .forward, animation: .default) private var gameplans: [Gameplan]
+	@State private var forceRefresh = 0
 
 	private var activities: (today: [Activity], future: [Activity]) {
 		let activities = gameplans.compactMap(\.nextOccurrence)
-		let today = activities.filter(\.date.isInToday)
-		let future = activities.filter { !$0.date.isInToday }
+		let today = activities.filter { ($0.date.isInToday && $0.date.isInTheFuture) || ($0.date.isInToday && $0.date.isWithin(2, .hour, of: .now)) }.sorted(by: { $0.date < $1.date })
+		let future = activities.subtracting(today)
 
 		return (today, future)
 	}
@@ -84,6 +84,11 @@ struct HomeScreen: View {
 #if os(iOS)
 				.background(Color.systemGroupedBackground)
 #endif
+				.onAppear {
+					Timer.scheduledTimer(withTimeInterval: 60*60*12, repeats: true) { _ in
+						forceRefresh = Date.now.hashValue
+					}
+				}
 		}
 	}
 }
@@ -95,10 +100,10 @@ struct HomeScreen: View {
 	let gameplan = Gameplan(activityType: .personalPrayer)
 	gameplan.customSourceText = "Test source text"
 	gameplan.customSourceTitle = "Magnificat"
-	gameplan.frequency = .weekly
+	gameplan.frequency = .daily
 	gameplan.byDayOfWeek = .wednesday
 	container.mainContext.insert(gameplan)
-	
+
 	return HomeScreen()
 		.modelContainer(container)
 		.environmentObject(Romcal.preview)

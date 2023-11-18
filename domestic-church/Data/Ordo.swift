@@ -29,13 +29,10 @@ struct Reading: Codable {
 	let formatted: String
 }
 
-struct Passage {
-	let verses: String
-	let title: String
-}
-
 class Ordo {
-	let ordo: OrdoJSON
+	let json = loadOrdo()
+	static let shared = Ordo()
+	let reader = BibleReader()
 	
 	enum Reading: String {
 		case firstReading
@@ -54,22 +51,18 @@ class Ordo {
 		return try! decoder.decode(OrdoJSON.self, from: jsonData)
 	}
 	
-	init() {
-		self.ordo = Self.loadOrdo()
-	}
-	
 	private func getOrdo(for cycle: Romcal.Cycle) -> [String: OrdoEntry] {
 		switch cycle {
 		case .sundayCycle(.yearA):
-			return ordo.YEAR_A
+			return Ordo.shared.json.YEAR_A
 		case .sundayCycle(.yearB):
-			return ordo.YEAR_B
+			return Ordo.shared.json.YEAR_B
 		case .sundayCycle(.yearC):
-			return ordo.YEAR_C
+			return Ordo.shared.json.YEAR_C
 		case .weekdayCycle(.year1):
-			return ordo.YEAR_1
+			return Ordo.shared.json.YEAR_1
 		case .weekdayCycle(.year2):
-			return ordo.YEAR_2
+			return Ordo.shared.json.YEAR_2
 		}
 	}
 	
@@ -82,52 +75,12 @@ class Ordo {
 	}
 	
 	func getPassage(for liturgicalDate: Romcal.LiturgicalDate, reading: Reading) -> Passage? {
-		let id = liturgicalDate.id
 		guard let ordoEntry = getOrdoEntry(for: liturgicalDate) else { return nil }
-		
-		let parser = BibleParser()
-		let passage = parser.getVerses(verses: ordoEntry.gospel.range)
-		
-		return Passage(verses: passage, title: ordoEntry.gospel.formatted)
-	}
-}
-
-class BibleParser {
-	var bibleXML: String
-	var passage: [String] = []
 	
-	init() {
-		let biblePath = Bundle.main.path(forResource: "rsv", ofType: "xml")
-		let bibleXML = try! String(contentsOfFile: biblePath!, encoding: .utf8)
-		self.bibleXML = bibleXML
-	}
-	
-	func getVerses(verses: [String]) -> String {
-		let xmlParser = XMLHash.config { config in
-			config.caseInsensitive = true
-			config.shouldProcessLazily = true
-			config.shouldProcessNamespaces = false
+		if let verses = reader.getVerses(ids: ordoEntry.gospel.range) {
+			return Passage(verses: verses.map(\.text), title: "", reference: ordoEntry.gospel.formatted)
 		}
-		let xml = xmlParser.parse(bibleXML)
 		
-		var passage: [String] = []
-		
-		func enumerate(indexer: XMLIndexer) {
-			for child in indexer.children {
-				if child.element?.name == "verse", let osisID = child.element?.attribute(by: "osisID")?.text, verses.contains(osisID) {
-					passage.append(child.element!.text)
-					if passage.count.isMultiple(of: 2) {
-						passage.append("\n\n")
-					} else {
-						passage.append(" ")
-					}
-				}
-				enumerate(indexer: child)
-			}
-		}
-
-		enumerate(indexer: xml)
-		
-		return passage.joined(separator: "")
+		return nil
 	}
 }

@@ -19,8 +19,16 @@ extension Date {
 	func isInSameCalendarDay(as date: Date) -> Bool {
 		isInSameDay(as: date) && isInSameMonth(as: date) && isInSameYear(as: date)
 	}
+	
+	func isAfter(date: Date) -> Bool { self > date }
+	func isBefore(date: Date) -> Bool { self < date }
 
 	func isInSameDay(as date: Date) -> Bool { Calendar.current.isDate(self, inSameDayAs: date) }
+	func isWithin(_ count: Int, _ component: Calendar.Component, of date: Date) -> Bool {
+		let upperBound = Calendar.current.date(byAdding: component, value: count, to: date)!
+		let lowerBound = Calendar.current.date(byAdding: component, value: -count, to: date)!
+		return self > lowerBound && self < upperBound
+	}
 
 	var isInThisYear:  Bool { isInSameYear(as: Date()) }
 	var isInThisMonth: Bool { isInSameMonth(as: Date()) }

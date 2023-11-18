@@ -16,7 +16,7 @@ struct ActivityCard: View {
 
 	var ordoEntry: OrdoEntry? {
 		if let liturgicalDate = romcal.findBy(date: activity.date) {
-			return Ordo().getOrdoEntry(for: liturgicalDate)
+			return Ordo.shared.getOrdoEntry(for: liturgicalDate)
 		}
 
 		return nil
@@ -50,7 +50,7 @@ struct ActivityCard: View {
 						.font(.title2)
 						.foregroundStyle(Color.label)
 					Spacer()
-					Text("\(activity.date, formatter: dateFormatter)")
+					Text("\(activity.date, formatter: activity.date.isInToday ? timeFormatter : dateFormatter)")
 						.font(.caption)
 						.foregroundStyle(Color.label)
 				}
@@ -99,6 +99,13 @@ private let dateFormatter: DateFormatter = {
 	formatter.doesRelativeDateFormatting = true
 	formatter.timeStyle = .none
 	formatter.dateStyle = .medium
+	return formatter
+}()
+
+private let timeFormatter: DateFormatter = {
+	let formatter = DateFormatter()
+	formatter.timeStyle = .short
+	formatter.dateStyle = .none
 	return formatter
 }()
 

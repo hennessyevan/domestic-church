@@ -10,12 +10,19 @@ import SwiftUI
 import SwipeActions
 import SystemColors
 
+@Observable
+class GameplanScreenViewModel {
+	var expandedId: PersistentIdentifier?
+}
+
 struct GameplanView: View {
 	@Environment(\.modelContext) private var modelContext
 
 	@Query(sort: \Gameplan.createdAt, order: .forward, animation: .default) private var gameplans: [Gameplan]
 
 	@State private var isNewItemDialogShown = false
+	
+	@State var viewModel = GameplanScreenViewModel()
 
 	var body: some View {
 		NavigationView {
@@ -46,7 +53,7 @@ struct GameplanView: View {
 				}
 			}
 			.background(Color.systemGroupedBackground)
-		}
+		}.environment(viewModel)
 	}
 
 	struct EmptyView: View {
@@ -135,8 +142,9 @@ private let itemFormatter: DateFormatter = {
 	let config = ModelConfiguration(isStoredInMemoryOnly: true)
 	let container = try! ModelContainer(for: Gameplan.self, configurations: config)
 
-	let gameplan = Gameplan(activityType: .personalPrayer)
-	container.mainContext.insert(gameplan)
+	let gameplans = [Gameplan(activityType: .personalPrayer), Gameplan(activityType: .scripture)].forEach({
+		container.mainContext.insert($0)
+	})
 
 	return GameplanView().modelContainer(container)
 }

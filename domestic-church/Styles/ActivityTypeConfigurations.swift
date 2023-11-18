@@ -19,12 +19,12 @@ let TYPE_COLORS: [ActivityType: Color] = [
 	.scripture: Color("scripture"),
 	.personalPrayer: Color("personalPrayer"),
 	.conjugalPrayer: Color("personalPrayer"),
-	.familyPrayer: Color("personalPrayer")
+	.familyPrayer: Color("personalPrayer"),
 ]
 
 let TYPE_ICONS: [ActivityType: String] = [
 	.scripture: "book.closed.fill",
 	.personalPrayer: "person.fill",
-	.conjugalPrayer: "questionmark.square.dashed",
-	.familyPrayer: "questionmark.square.dashed"
+	.conjugalPrayer: "figure.2.arms.open",
+	.familyPrayer: "figure.2.and.child.holdinghands"
 ]
