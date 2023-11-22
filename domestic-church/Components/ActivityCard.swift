@@ -23,9 +23,7 @@ struct ActivityCard: View {
 	}
 
 	var body: some View {
-		NavigationLink {
-			ActivityView(activity: activity)
-		} label: {
+		NavigationLink(value: activity, label: {
 			VStack {
 				HStack {
 					Image(systemName: TYPE_ICONS[type]!)
@@ -55,7 +53,7 @@ struct ActivityCard: View {
 						.foregroundStyle(Color.label)
 				}
 			}
-		}
+		})
 		.padding(.all, 16)
 		.frame(minWidth: 100, idealWidth: .infinity, maxWidth: .infinity)
 		.frame(minHeight: 100, idealHeight: 100, maxHeight: 100)

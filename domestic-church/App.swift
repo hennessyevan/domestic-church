@@ -11,28 +11,62 @@ import SwiftUI
 
 @main
 struct domestic_churchApp: App {
-	@State var selection = "home"
 	@StateObject var romcal = Romcal()
+
+	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+	@State var router = Router.shared
+	@State private var activeTab: Tab = .home
 
 	var body: some Scene {
 		WindowGroup {
-			TabView(selection: $selection) {
-				HomeScreen()
-					.tabItem {
-						Label("Home", systemImage: "house.fill")
-					}.tag("home")
+			TabView(selection: $activeTab.onUpdate {
+				router.tabClicked(activeTab)
+			}) {
+				HomeScreen(router: $router)
+					.tabItem { Label("Home", systemImage: "house.fill") }
+					.tag(Tab.home)
 
-				HStack {}.tabItem {
-					Label("Check In", systemImage: "person.badge.shield.checkmark.fill")
-				}.tag("checkin")
+//				HStack {}.tabItem {
+//					Label("Check In", systemImage: "person.badge.shield.checkmark.fill")
+//				}.tag(Tab.checkin)
 
-				GameplanView()
-					.tabItem {
-						Label("Gameplan", systemImage: "list.bullet.rectangle.portrait.fill")
-					}.tag("gameplan")
+				GameplanView(router: $router)
+					.tabItem { Label("Gameplan", systemImage: "list.bullet.rectangle.portrait.fill") }
+					.tag(Tab.gameplan)
+			}
+			.onChange(of: router.tab) { _, newTab in
+				activeTab = newTab
 			}
 			.environmentObject(romcal)
 			.modelContainer(for: [Gameplan.self])
 		}
+	}
+}
+
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+		print("Notification tapped for activityID: \(response.notification.request.identifier)")
+
+		// fetch gameplan by id from CoreData
+		let container = try! ModelContainer(for: Gameplan.self)
+		let context = container.mainContext
+
+		var fetchDescriptor = FetchDescriptor<Gameplan>()
+		fetchDescriptor.fetchLimit = 1
+		let gameplans = try! context.fetch(fetchDescriptor)
+		let gameplan = gameplans.first
+
+		if let activity = gameplan?.nextOccurrence {
+			Router.shared.goToActivity(activity)
+		}
+
+		completionHandler()
+	}
+
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+		UNUserNotificationCenter.current().delegate = self
+		// Your other setup code
+		return true
 	}
 }

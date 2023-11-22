@@ -11,6 +11,9 @@ import SystemColors
 
 struct LiturgicalDayView: View {
 	@EnvironmentObject var romcal: Romcal
+	@Environment(\.scenePhase) var scenePhase
+
+	var today: Romcal.LiturgicalDate? { romcal.today }
 
 	var body: some View {
 		if let today = romcal.today {
@@ -38,39 +41,42 @@ struct LiturgicalDayView: View {
 }
 
 struct HomeScreen: View {
+	@Binding var router: Router
+
 	@Environment(\.modelContext) private var modelContext
+	@Environment(\.scenePhase) private var scenePhase
 
+	@State private var reload = 0
 	@Query(sort: \Gameplan.createdAt, order: .forward, animation: .default) private var gameplans: [Gameplan]
-	@State private var forceRefresh = 0
 
-	private var activities: (today: [Activity], future: [Activity]) {
-		let activities = gameplans.compactMap(\.nextOccurrence)
-		let today = activities.filter { ($0.date.isInToday && $0.date.isInTheFuture) || ($0.date.isInToday && $0.date.isWithin(2, .hour, of: .now)) }.sorted(by: { $0.date < $1.date })
+	private var activityFeed: (today: [Activity], future: [Activity]) {
+		let activities = gameplans.compactMap(\.nextOccurrence).sorted(by: { $0.date < $1.date })
+		let today = activities.filter(\.date.isInToday)
 		let future = activities.subtracting(today)
 
 		return (today, future)
 	}
 
 	var body: some View {
-		NavigationView {
+		NavigationStack(path: $router.homePath) {
 			ScrollView {
 				VStack(alignment: .leading) {
 					LiturgicalDayView().padding()
 
-					if !activities.today.isEmpty {
+					if !activityFeed.today.isEmpty {
 						GroupBox(label: Text("Today"), content: {
 							VStack(spacing: 12) {
-								ForEach(activities.today) { activity in
+								ForEach(activityFeed.today) { activity in
 									ActivityCard(activity: activity)
 								}
 							}
 						}).groupBoxStyle(SecondaryGroupBoxStyle())
 					}
 
-					if !activities.future.isEmpty {
+					if !activityFeed.future.isEmpty {
 						GroupBox(label: Text("Next"), content: {
 							VStack(spacing: 12) {
-								ForEach(activities.future) { activity in
+								ForEach(activityFeed.future) { activity in
 									ActivityCard(activity: activity)
 								}
 							}
@@ -81,14 +87,15 @@ struct HomeScreen: View {
 				.navigationTitle("Home")
 			}
 			.frame(minWidth: 0, maxWidth: .infinity)
-#if os(iOS)
-				.background(Color.systemGroupedBackground)
-#endif
-				.onAppear {
-					Timer.scheduledTimer(withTimeInterval: 60*60*12, repeats: true) { _ in
-						forceRefresh = Date.now.hashValue
-					}
+			.onChange(of: scenePhase, initial: false) { _, phase in
+				if phase == .active {
+					reload += 1
 				}
+			}
+			.background(Color.systemGroupedBackground)
+			.navigationDestination(for: Activity.self) { activity in
+				ActivityView(activity: activity)
+			}
 		}
 	}
 }
@@ -104,7 +111,9 @@ struct HomeScreen: View {
 	gameplan.byDayOfWeek = .wednesday
 	container.mainContext.insert(gameplan)
 
-	return HomeScreen()
+	@State var router = Router()
+
+	return HomeScreen(router: $router)
 		.modelContainer(container)
 		.environmentObject(Romcal.preview)
 }

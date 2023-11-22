@@ -11,7 +11,6 @@
 		35379F952AD61A6E00999E19 /* Gameplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F942AD61A6E00999E19 /* Gameplan.swift */; };
 		35379F962AD61A6E00999E19 /* Gameplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F942AD61A6E00999E19 /* Gameplan.swift */; };
 		35379F992AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */; };
-		35379F9A2AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */; };
 		353DF1C82B0862A800E6AE93 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 353DF1C72B0862A800E6AE93 /* GRDB */; };
 		353DF1CA2B0876C600E6AE93 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */; };
 		3549B94D2AE7664A00736796 /* ordo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3549B94C2AE7664A00736796 /* ordo.json */; };
@@ -20,6 +19,52 @@
 		3549B95F2AE85DB100736796 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 3549B95E2AE85DB100736796 /* SwipeActions */; };
 		354B635B2AD08BCF00CC687A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 354B635A2AD08BCF00CC687A /* Localizable.xcstrings */; };
 		35587F6D2AD79F4300569112 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35587F6C2AD79F4300569112 /* String+Extensions.swift */; };
+		35595B682B0C400E005E13A1 /* Ordo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549B94E2AE76B5A00736796 /* Ordo.swift */; };
+		35595B692B0C400E005E13A1 /* Romcal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6452A9A467A004C9828 /* Romcal.swift */; };
+		35595B6A2B0C400E005E13A1 /* romcal3.js in Resources */ = {isa = PBXBuildFile; fileRef = 35FA96AD2A9DA47F003767EE /* romcal3.js */; };
+		35595B6B2B0C400E005E13A1 /* Canada_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F22AA2D711002B47D6 /* Canada_En.js */; };
+		35595B6C2B0C400E005E13A1 /* ordo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3549B94C2AE7664A00736796 /* ordo.json */; };
+		35595B6D2B0C400E005E13A1 /* UnitedStates_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F42AA2E6D6002B47D6 /* UnitedStates_En.js */; };
+		35595B6E2B0C400E005E13A1 /* Recurrence+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */; };
+		35595B6F2B0C400E005E13A1 /* BibleReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35601CC52B084CF400C3B6C9 /* BibleReader.swift */; };
+		35595B702B0C4013005E13A1 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */; };
+		35595B712B0C4016005E13A1 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */; };
+		35595B722B0C4038005E13A1 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B11022A9AFC9B00A5A784 /* ActivityView.swift */; };
+		35595B732B0C4038005E13A1 /* GameplanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */; };
+		35595B752B0C403A005E13A1 /* GameplanCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E62E2A9985E6004C9828 /* GameplanCard.swift */; };
+		35595B762B0C403A005E13A1 /* GameplanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6362A999675004C9828 /* GameplanForm.swift */; };
+		35595B772B0C403A005E13A1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35587F6C2AD79F4300569112 /* String+Extensions.swift */; };
+		35595B782B0C403A005E13A1 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6422A99AD35004C9828 /* ActivityCard.swift */; };
+		35595B792B0C403A005E13A1 /* MarqueeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526A67B2AF40E2C00903582 /* MarqueeText.swift */; };
+		35595B7A2B0C4042005E13A1 /* Romcal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6452A9A467A004C9828 /* Romcal.swift */; };
+		35595B7B2B0C4042005E13A1 /* ordo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3549B94C2AE7664A00736796 /* ordo.json */; };
+		35595B7C2B0C4042005E13A1 /* romcal3.js in Resources */ = {isa = PBXBuildFile; fileRef = 35FA96AD2A9DA47F003767EE /* romcal3.js */; };
+		35595B7D2B0C4042005E13A1 /* Ordo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549B94E2AE76B5A00736796 /* Ordo.swift */; };
+		35595B7E2B0C4042005E13A1 /* Canada_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F22AA2D711002B47D6 /* Canada_En.js */; };
+		35595B7F2B0C4042005E13A1 /* Recurrence+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */; };
+		35595B802B0C4042005E13A1 /* BibleReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35601CC52B084CF400C3B6C9 /* BibleReader.swift */; };
+		35595B812B0C4042005E13A1 /* UnitedStates_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F42AA2E6D6002B47D6 /* UnitedStates_En.js */; };
+		35595B822B0C4045005E13A1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6302A99874F004C9828 /* Activity.swift */; };
+		35595B832B0C4045005E13A1 /* Gameplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F942AD61A6E00999E19 /* Gameplan.swift */; };
+		35595B842B0C4048005E13A1 /* RoundedTextEditorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */; };
+		35595B852B0C4048005E13A1 /* SecondaryGroupBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DC2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift */; };
+		35595B862B0C4048005E13A1 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458D82AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift */; };
+		35595B872B0C4048005E13A1 /* ActivityTypeConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */; };
+		35595B882B0C409D005E13A1 /* nrsvce.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 35601CCB2B0858C300C3B6C9 /* nrsvce.sqlite */; };
+		35595B892B0C409E005E13A1 /* nrsvce.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 35601CCB2B0858C300C3B6C9 /* nrsvce.sqlite */; };
+		35595B8E2B0C40FA005E13A1 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B8D2B0C40FA005E13A1 /* GRDB */; };
+		35595B902B0C4118005E13A1 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B8F2B0C4118005E13A1 /* GRDB */; };
+		35595B922B0C414B005E13A1 /* RWMRecurrenceRule in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B912B0C414B005E13A1 /* RWMRecurrenceRule */; };
+		35595B942B0C414B005E13A1 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B932B0C414B005E13A1 /* SystemColors */; };
+		35595B962B0C414B005E13A1 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B952B0C414B005E13A1 /* SwipeActions */; };
+		35595B982B0C4152005E13A1 /* RWMRecurrenceRule in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B972B0C4152005E13A1 /* RWMRecurrenceRule */; };
+		35595B9B2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9A2B0C42A4005E13A1 /* GameplanFormSettings.swift */; };
+		35595B9C2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9A2B0C42A4005E13A1 /* GameplanFormSettings.swift */; };
+		35595B9D2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9A2B0C42A4005E13A1 /* GameplanFormSettings.swift */; };
+		35595B9F2B0C42C9005E13A1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9E2B0C42C9005E13A1 /* Notifications.swift */; };
+		35595BA12B0C5241005E13A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595BA02B0C5241005E13A1 /* Router.swift */; };
+		35595BA22B0C5241005E13A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595BA02B0C5241005E13A1 /* Router.swift */; };
+		35595BA32B0C5241005E13A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595BA02B0C5241005E13A1 /* Router.swift */; };
 		35601CC62B084CF400C3B6C9 /* BibleReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35601CC52B084CF400C3B6C9 /* BibleReader.swift */; };
 		35601CCC2B0858C300C3B6C9 /* nrsvce.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 35601CCB2B0858C300C3B6C9 /* nrsvce.sqlite */; };
 		358B11032A9AFC9B00A5A784 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B11022A9AFC9B00A5A784 /* ActivityView.swift */; };
@@ -27,13 +72,16 @@
 		35A458DB2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */; };
 		35A458DD2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DC2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift */; };
 		35A458DF2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */; };
+		35CB2FFB2B0D95EC009C89C4 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */; };
+		35CB2FFC2B0D95EF009C89C4 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */; };
+		35CB2FFD2B0D9605009C89C4 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9E2B0C42C9005E13A1 /* Notifications.swift */; };
+		35CB2FFE2B0D9605009C89C4 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9E2B0C42C9005E13A1 /* Notifications.swift */; };
+		35CB2FFF2B0D962A009C89C4 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35587F6C2AD79F4300569112 /* String+Extensions.swift */; };
 		35D1E5F52A996CCE004C9828 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5F42A996CCE004C9828 /* App.swift */; };
 		35D1E5FC2A996CCE004C9828 /* GameplanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */; };
 		35D1E5FE2A996CCF004C9828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D1E5FD2A996CCF004C9828 /* Assets.xcassets */; };
 		35D1E6022A996CCF004C9828 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D1E6012A996CCF004C9828 /* Preview Assets.xcassets */; };
-		35D1E60C2A996CCF004C9828 /* domestic_churchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E60B2A996CCF004C9828 /* domestic_churchTests.swift */; };
-		35D1E6162A996CCF004C9828 /* domestic_churchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6152A996CCF004C9828 /* domestic_churchUITests.swift */; };
-		35D1E6182A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6172A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift */; };
+		35D1E60C2A996CCF004C9828 /* romcalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E60B2A996CCF004C9828 /* romcalTests.swift */; };
 		35D1E62D2A99823C004C9828 /* RWMRecurrenceRule in Frameworks */ = {isa = PBXBuildFile; productRef = 35D1E62C2A99823C004C9828 /* RWMRecurrenceRule */; };
 		35D1E62F2A9985E6004C9828 /* GameplanCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E62E2A9985E6004C9828 /* GameplanCard.swift */; };
 		35D1E6312A99874F004C9828 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6302A99874F004C9828 /* Activity.swift */; };
@@ -43,7 +91,6 @@
 		35D1E6402A99ACDA004C9828 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */; };
 		35D1E6432A99AD35004C9828 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6422A99AD35004C9828 /* ActivityCard.swift */; };
 		35D1E6462A9A467A004C9828 /* Romcal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6452A9A467A004C9828 /* Romcal.swift */; };
-		35D1E6472A9A467A004C9828 /* Romcal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6452A9A467A004C9828 /* Romcal.swift */; };
 		35F576F12AA2C5E3002B47D6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */; };
 		35F576F32AA2D711002B47D6 /* Canada_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F22AA2D711002B47D6 /* Canada_En.js */; };
 		35F576F52AA2E6D6002B47D6 /* UnitedStates_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F42AA2E6D6002B47D6 /* UnitedStates_En.js */; };
@@ -75,7 +122,10 @@
 		3549B94C2AE7664A00736796 /* ordo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ordo.json; path = ../../../../ordo/ordo.json; sourceTree = "<group>"; };
 		3549B94E2AE76B5A00736796 /* Ordo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ordo.swift; sourceTree = "<group>"; };
 		354B635A2AD08BCF00CC687A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		35587F6C2AD79F4300569112 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "domestic-church/String+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		35587F6C2AD79F4300569112 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "domestic-church/Extensions/String+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		35595B9A2B0C42A4005E13A1 /* GameplanFormSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanFormSettings.swift; sourceTree = "<group>"; };
+		35595B9E2B0C42C9005E13A1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		35595BA02B0C5241005E13A1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		35601CC52B084CF400C3B6C9 /* BibleReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleReader.swift; sourceTree = "<group>"; };
 		35601CCB2B0858C300C3B6C9 /* nrsvce.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = nrsvce.sqlite; path = ../../../../ordo/bibles/nrsvce.sqlite; sourceTree = "<group>"; };
 		358B11022A9AFC9B00A5A784 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
@@ -84,6 +134,7 @@
 		35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextEditorStyle.swift; sourceTree = "<group>"; };
 		35A458DC2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryGroupBoxStyle.swift; sourceTree = "<group>"; };
 		35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeConfigurations.swift; sourceTree = "<group>"; };
+		35CB30002B0D9713009C89C4 /* domestic-church.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "domestic-church.xctestplan"; sourceTree = "<group>"; };
 		35D1E5F12A996CCE004C9828 /* domestic-church.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "domestic-church.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1E5F42A996CCE004C9828 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanScreen.swift; sourceTree = "<group>"; };
@@ -91,10 +142,8 @@
 		35D1E5FF2A996CCF004C9828 /* domestic_church.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = domestic_church.entitlements; sourceTree = "<group>"; };
 		35D1E6012A996CCF004C9828 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35D1E6072A996CCF004C9828 /* domestic-churchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "domestic-churchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		35D1E60B2A996CCF004C9828 /* domestic_churchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domestic_churchTests.swift; sourceTree = "<group>"; };
+		35D1E60B2A996CCF004C9828 /* romcalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = romcalTests.swift; sourceTree = "<group>"; };
 		35D1E6112A996CCF004C9828 /* domestic-churchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "domestic-churchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		35D1E6152A996CCF004C9828 /* domestic_churchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domestic_churchUITests.swift; sourceTree = "<group>"; };
-		35D1E6172A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domestic_churchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		35D1E62E2A9985E6004C9828 /* GameplanCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanCard.swift; sourceTree = "<group>"; };
 		35D1E6302A99874F004C9828 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		35D1E6362A999675004C9828 /* GameplanForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanForm.swift; sourceTree = "<group>"; };
@@ -124,6 +173,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35595B8E2B0C40FA005E13A1 /* GRDB in Frameworks */,
+				35595B982B0C4152005E13A1 /* RWMRecurrenceRule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +182,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35595B942B0C414B005E13A1 /* SystemColors in Frameworks */,
+				35595B962B0C414B005E13A1 /* SwipeActions in Frameworks */,
+				35595B902B0C4118005E13A1 /* GRDB in Frameworks */,
+				35595B922B0C414B005E13A1 /* RWMRecurrenceRule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +197,16 @@
 			children = (
 				35D1E6302A99874F004C9828 /* Activity.swift */,
 				35379F942AD61A6E00999E19 /* Gameplan.swift */,
+				35595B9A2B0C42A4005E13A1 /* GameplanFormSettings.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		35595B8A2B0C40FA005E13A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		35A458D72AF1E8A200C5F58E /* Styles */ = {
@@ -157,13 +220,25 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		35CB2FFA2B0D95DA009C89C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				35587F6C2AD79F4300569112 /* String+Extensions.swift */,
+				353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */,
+				35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		35D1E5E82A996CCE004C9828 = {
 			isa = PBXGroup;
 			children = (
+				35CB30002B0D9713009C89C4 /* domestic-church.xctestplan */,
 				35D1E5F32A996CCE004C9828 /* domestic-church */,
 				35D1E60A2A996CCF004C9828 /* domestic-churchTests */,
 				35D1E6142A996CCF004C9828 /* domestic-churchUITests */,
 				35D1E5F22A996CCE004C9828 /* Products */,
+				35595B8A2B0C40FA005E13A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,19 +255,20 @@
 		35D1E5F32A996CCE004C9828 /* domestic-church */ = {
 			isa = PBXGroup;
 			children = (
+				35CB2FFA2B0D95DA009C89C4 /* Extensions */,
 				35A458D72AF1E8A200C5F58E /* Styles */,
 				35379F972AD61A8A00999E19 /* Models */,
 				35D1E6262A997121004C9828 /* Data */,
 				35D1E6252A99711A004C9828 /* Components */,
 				35D1E6242A997106004C9828 /* Screens */,
 				35D1E5F42A996CCE004C9828 /* App.swift */,
+				35595BA02B0C5241005E13A1 /* Router.swift */,
+				35595B9E2B0C42C9005E13A1 /* Notifications.swift */,
 				35D1E5FD2A996CCF004C9828 /* Assets.xcassets */,
 				35D1E5FF2A996CCF004C9828 /* domestic_church.entitlements */,
 				35D1E6002A996CCF004C9828 /* Preview Content */,
-				35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */,
 				354B635A2AD08BCF00CC687A /* Localizable.xcstrings */,
 				35A458D62AF1E3B200C5F58E /* Info.plist */,
-				353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */,
 			);
 			path = "domestic-church";
 			sourceTree = "<group>";
@@ -208,7 +284,7 @@
 		35D1E60A2A996CCF004C9828 /* domestic-churchTests */ = {
 			isa = PBXGroup;
 			children = (
-				35D1E60B2A996CCF004C9828 /* domestic_churchTests.swift */,
+				35D1E60B2A996CCF004C9828 /* romcalTests.swift */,
 			);
 			path = "domestic-churchTests";
 			sourceTree = "<group>";
@@ -216,8 +292,6 @@
 		35D1E6142A996CCF004C9828 /* domestic-churchUITests */ = {
 			isa = PBXGroup;
 			children = (
-				35D1E6152A996CCF004C9828 /* domestic_churchUITests.swift */,
-				35D1E6172A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift */,
 			);
 			path = "domestic-churchUITests";
 			sourceTree = "<group>";
@@ -238,7 +312,6 @@
 				35D1E62E2A9985E6004C9828 /* GameplanCard.swift */,
 				35D1E6362A999675004C9828 /* GameplanForm.swift */,
 				35D1E6422A99AD35004C9828 /* ActivityCard.swift */,
-				35587F6C2AD79F4300569112 /* String+Extensions.swift */,
 				3526A67B2AF40E2C00903582 /* MarqueeText.swift */,
 			);
 			path = Components;
@@ -301,6 +374,10 @@
 				35D1E6092A996CCF004C9828 /* PBXTargetDependency */,
 			);
 			name = "domestic-churchTests";
+			packageProductDependencies = (
+				35595B8D2B0C40FA005E13A1 /* GRDB */,
+				35595B972B0C4152005E13A1 /* RWMRecurrenceRule */,
+			);
 			productName = "domestic-churchTests";
 			productReference = 35D1E6072A996CCF004C9828 /* domestic-churchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -319,6 +396,12 @@
 				35D1E6132A996CCF004C9828 /* PBXTargetDependency */,
 			);
 			name = "domestic-churchUITests";
+			packageProductDependencies = (
+				35595B8F2B0C4118005E13A1 /* GRDB */,
+				35595B912B0C414B005E13A1 /* RWMRecurrenceRule */,
+				35595B932B0C414B005E13A1 /* SystemColors */,
+				35595B952B0C414B005E13A1 /* SwipeActions */,
+			);
 			productName = "domestic-churchUITests";
 			productReference = 35D1E6112A996CCF004C9828 /* domestic-churchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -393,6 +476,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35595B6D2B0C400E005E13A1 /* UnitedStates_En.js in Resources */,
+				35595B6A2B0C400E005E13A1 /* romcal3.js in Resources */,
+				35595B882B0C409D005E13A1 /* nrsvce.sqlite in Resources */,
+				35595B6C2B0C400E005E13A1 /* ordo.json in Resources */,
+				35595B6B2B0C400E005E13A1 /* Canada_En.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +488,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35595B812B0C4042005E13A1 /* UnitedStates_En.js in Resources */,
+				35595B7E2B0C4042005E13A1 /* Canada_En.js in Resources */,
+				35595B892B0C409E005E13A1 /* nrsvce.sqlite in Resources */,
+				35595B7C2B0C4042005E13A1 /* romcal3.js in Resources */,
+				35595B7B2B0C4042005E13A1 /* ordo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +508,7 @@
 				35F576F12AA2C5E3002B47D6 /* Date+Extensions.swift in Sources */,
 				35D1E6462A9A467A004C9828 /* Romcal.swift in Sources */,
 				35601CC62B084CF400C3B6C9 /* BibleReader.swift in Sources */,
+				35595B9B2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */,
 				35379F992AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */,
 				35A458DD2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift in Sources */,
 				35379F952AD61A6E00999E19 /* Gameplan.swift in Sources */,
@@ -425,9 +519,11 @@
 				35A458DB2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift in Sources */,
 				35D1E5FC2A996CCE004C9828 /* GameplanScreen.swift in Sources */,
 				35A458D92AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift in Sources */,
+				35595BA12B0C5241005E13A1 /* Router.swift in Sources */,
 				3549B94F2AE76B5A00736796 /* Ordo.swift in Sources */,
 				35A458DF2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift in Sources */,
 				35D1E6402A99ACDA004C9828 /* HomeScreen.swift in Sources */,
+				35595B9F2B0C42C9005E13A1 /* Notifications.swift in Sources */,
 				3526A67C2AF40E2C00903582 /* MarqueeText.swift in Sources */,
 				35D1E6312A99874F004C9828 /* Activity.swift in Sources */,
 				35D1E6372A999675004C9828 /* GameplanForm.swift in Sources */,
@@ -438,10 +534,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CB2FFD2B0D9605009C89C4 /* Notifications.swift in Sources */,
+				35CB2FFF2B0D962A009C89C4 /* String+Extensions.swift in Sources */,
+				35595BA22B0C5241005E13A1 /* Router.swift in Sources */,
 				35D1E6322A99874F004C9828 /* Activity.swift in Sources */,
-				35379F9A2AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */,
-				35D1E6472A9A467A004C9828 /* Romcal.swift in Sources */,
-				35D1E60C2A996CCF004C9828 /* domestic_churchTests.swift in Sources */,
+				35595B712B0C4016005E13A1 /* Array+Extensions.swift in Sources */,
+				35595B702B0C4013005E13A1 /* Date+Extensions.swift in Sources */,
+				35595B6E2B0C400E005E13A1 /* Recurrence+Helpers.swift in Sources */,
+				35595B692B0C400E005E13A1 /* Romcal.swift in Sources */,
+				35595B682B0C400E005E13A1 /* Ordo.swift in Sources */,
+				35D1E60C2A996CCF004C9828 /* romcalTests.swift in Sources */,
+				35595B9C2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */,
+				35595B6F2B0C400E005E13A1 /* BibleReader.swift in Sources */,
 				35379F962AD61A6E00999E19 /* Gameplan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,8 +554,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35D1E6162A996CCF004C9828 /* domestic_churchUITests.swift in Sources */,
-				35D1E6182A996CCF004C9828 /* domestic_churchUITestsLaunchTests.swift in Sources */,
+				35595B822B0C4045005E13A1 /* Activity.swift in Sources */,
+				35595B752B0C403A005E13A1 /* GameplanCard.swift in Sources */,
+				35CB2FFB2B0D95EC009C89C4 /* Date+Extensions.swift in Sources */,
+				35CB2FFC2B0D95EF009C89C4 /* Array+Extensions.swift in Sources */,
+				35595B732B0C4038005E13A1 /* GameplanScreen.swift in Sources */,
+				35595B782B0C403A005E13A1 /* ActivityCard.swift in Sources */,
+				35595B862B0C4048005E13A1 /* TrailingIconLabelStyle.swift in Sources */,
+				35595B762B0C403A005E13A1 /* GameplanForm.swift in Sources */,
+				35595B852B0C4048005E13A1 /* SecondaryGroupBoxStyle.swift in Sources */,
+				35595B802B0C4042005E13A1 /* BibleReader.swift in Sources */,
+				35595B7F2B0C4042005E13A1 /* Recurrence+Helpers.swift in Sources */,
+				35595B872B0C4048005E13A1 /* ActivityTypeConfigurations.swift in Sources */,
+				35595B7D2B0C4042005E13A1 /* Ordo.swift in Sources */,
+				35595BA32B0C5241005E13A1 /* Router.swift in Sources */,
+				35595B772B0C403A005E13A1 /* String+Extensions.swift in Sources */,
+				35595B842B0C4048005E13A1 /* RoundedTextEditorStyle.swift in Sources */,
+				35595B792B0C403A005E13A1 /* MarqueeText.swift in Sources */,
+				35595B9D2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */,
+				35CB2FFE2B0D9605009C89C4 /* Notifications.swift in Sources */,
+				35595B7A2B0C4042005E13A1 /* Romcal.swift in Sources */,
+				35595B832B0C4045005E13A1 /* Gameplan.swift in Sources */,
+				35595B722B0C4038005E13A1 /* ActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +715,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "domestic-church/domestic_church.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -620,6 +745,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hennessyevan.domestic-church";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -635,6 +761,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "domestic-church/domestic_church.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -664,6 +791,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hennessyevan.domestic-church";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -682,8 +810,8 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4CUBSV9SX3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hennessyevan.domestic-churchTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -706,8 +834,8 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4CUBSV9SX3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hennessyevan.domestic-churchTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -729,8 +857,8 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4CUBSV9SX3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hennessyevan.domestic-churchUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -752,8 +880,8 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 4CUBSV9SX3;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hennessyevan.domestic-churchUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -865,6 +993,36 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3549B95D2AE85DB100736796 /* XCRemoteSwiftPackageReference "SwipeActions" */;
 			productName = SwipeActions;
+		};
+		35595B8D2B0C40FA005E13A1 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 353DF1C62B0862A800E6AE93 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+		35595B8F2B0C4118005E13A1 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 353DF1C62B0862A800E6AE93 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+		35595B912B0C414B005E13A1 /* RWMRecurrenceRule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35D1E62B2A99823C004C9828 /* XCRemoteSwiftPackageReference "RWMRecurrenceRule" */;
+			productName = RWMRecurrenceRule;
+		};
+		35595B932B0C414B005E13A1 /* SystemColors */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35D1E6332A999099004C9828 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */;
+			productName = SystemColors;
+		};
+		35595B952B0C414B005E13A1 /* SwipeActions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3549B95D2AE85DB100736796 /* XCRemoteSwiftPackageReference "SwipeActions" */;
+			productName = SwipeActions;
+		};
+		35595B972B0C4152005E13A1 /* RWMRecurrenceRule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35D1E62B2A99823C004C9828 /* XCRemoteSwiftPackageReference "RWMRecurrenceRule" */;
+			productName = RWMRecurrenceRule;
 		};
 		35D1E62C2A99823C004C9828 /* RWMRecurrenceRule */ = {
 			isa = XCSwiftPackageProductDependency;

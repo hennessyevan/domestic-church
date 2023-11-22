@@ -46,9 +46,10 @@ private var defaultRule = createRecurrenceRule(frequency: .weekly, byDayOfWeek: 
 
 @Model
 public final class Gameplan {
+	private(set) var uuid = UUID()
 	var activityType: ActivityType
 	var rrule: String?
-	var timeOfDay:Date = Date.now
+	var timeOfDay: Date = Date.now
 	var source: Source
 	var createdAt: Date?
 	var customSourceText: String = ""
@@ -100,6 +101,7 @@ public final class Gameplan {
 			if let date = scheduler.nextDate(after: after, with: rules, startingFrom: startingDate) {
 				return Activity(
 					id: UUID(),
+					gameplan: self,
 					activityType: activityType,
 					date: date,
 					source: source,
@@ -111,4 +113,22 @@ public final class Gameplan {
 
 		return nil
 	}
+
+	var notificationDateComponents: DateComponents? {
+		let calendar = Calendar.current
+		var dateComponents = DateComponents()
+		let timeComponents = calendar.dateComponents([.day, .hour, .minute], from: self.timeOfDay)
+		
+		dateComponents.hour = timeComponents.hour
+		dateComponents.minute = timeComponents.minute
+		dateComponents.timeZone = calendar.timeZone
+		
+		if rruleObject.frequency == .weekly {
+			dateComponents.weekday = rruleObject.daysOfTheWeek?.first.hashValue
+		}
+		
+		return dateComponents
+	}
 }
+
+

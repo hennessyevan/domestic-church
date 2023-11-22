@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct Activity: Identifiable, Equatable {
+struct Activity: Identifiable, Equatable, Hashable {
 	var id: UUID
+	var gameplan: Gameplan? = nil
 	var activityType: ActivityType
 	var date: Date
 	var source: Source?

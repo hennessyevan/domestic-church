@@ -16,12 +16,13 @@ class GameplanScreenViewModel {
 }
 
 struct GameplanView: View {
+	@Binding var router: Router
 	@Environment(\.modelContext) private var modelContext
 
 	@Query(sort: \Gameplan.createdAt, order: .forward, animation: .default) private var gameplans: [Gameplan]
 
 	@State private var isNewItemDialogShown = false
-	
+
 	@State var viewModel = GameplanScreenViewModel()
 
 	var body: some View {
@@ -38,6 +39,23 @@ struct GameplanView: View {
 					.frame(minWidth: 0, maxWidth: .infinity)
 					.padding()
 				}
+
+				#if DEBUG
+				Button("Clear Notifications") {
+					NotificationHelper.clearAllNotifications()
+				}
+				Button("Test Notification") {
+					if let gameplan = gameplans.first {
+						gameplan.triggerTestNotification()
+					}
+				}
+				Button("Go to activity") {
+					if let activity = gameplans.first?.nextOccurrence {
+						print(activity)
+						router.goToActivity(activity)
+					}
+				}
+				#endif
 			}
 			.navigationTitle("Gameplan")
 			.toolbar {
@@ -142,9 +160,9 @@ private let itemFormatter: DateFormatter = {
 	let config = ModelConfiguration(isStoredInMemoryOnly: true)
 	let container = try! ModelContainer(for: Gameplan.self, configurations: config)
 
-	let gameplans = [Gameplan(activityType: .personalPrayer), Gameplan(activityType: .scripture)].forEach({
+	[Gameplan(activityType: .personalPrayer), Gameplan(activityType: .scripture)].forEach {
 		container.mainContext.insert($0)
-	})
+	}
 
-	return GameplanView().modelContainer(container)
+	return GameplanView(router: .constant(Router.shared)).modelContainer(container)
 }

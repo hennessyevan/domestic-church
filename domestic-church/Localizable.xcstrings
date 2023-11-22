@@ -21,7 +21,7 @@
     "Cancel" : {
 
     },
-    "Check In" : {
+    "Clear Notifications" : {
 
     },
     "conjugalPrayer" : {
@@ -92,6 +92,9 @@
     "Gameplan" : {
 
     },
+    "Go to activity" : {
+
+    },
     "Home" : {
 
     },
@@ -124,6 +127,9 @@
       }
     },
     "Source" : {
+
+    },
+    "Test Notification" : {
 
     },
     "Time of Day" : {

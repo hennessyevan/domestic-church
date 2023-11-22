@@ -11,27 +11,6 @@ import RWMRecurrenceRule
 import SwiftData
 import SwiftUI
 
-protocol FormSettings {
-	var sources: [Source] { get }
-}
-
-struct DefaultFormSettings: FormSettings {
-	var sources: [Source] = []
-}
-
-struct ScriptureFormSettings: FormSettings {
-	var sources: [Source] = [.dailyGospel, .bibleInAYear]
-}
-
-struct PersonalPrayerFormSettings: FormSettings {
-	var sources: [Source] = [.custom]
-}
-
-var formSettingsForActivityType: [ActivityType: FormSettings] = [
-	.scripture: ScriptureFormSettings(),
-	.personalPrayer: PersonalPrayerFormSettings(),
-]
-
 private let SPACING: CGFloat = 8
 
 struct GameplanForm: View {
@@ -52,12 +31,10 @@ struct GameplanForm: View {
 			VStack(alignment: .leading, spacing: SPACING) {
 				Label("Frequency", systemImage: "clock.arrow.circlepath").labelStyle(.titleOnly).fontWeight(.medium)
 				Picker("Frequency", selection: $gameplan.frequency) {
-					ForEach([EKRecurrenceFrequency.daily,
-					         EKRecurrenceFrequency.weekly,
-					         EKRecurrenceFrequency.monthly], id: \.self)
-					{ frequency in
-						Text(recurrenceFrequencyToString(frequency).capitalized).tag(frequency)
-					}
+					ForEach([EKRecurrenceFrequency.daily, EKRecurrenceFrequency.weekly], id: \.self)
+						{ frequency in
+							Text(recurrenceFrequencyToString(frequency).capitalized).tag(frequency)
+						}
 				}.pickerStyle(.segmented)
 			}
 
@@ -140,6 +117,9 @@ struct GameplanForm: View {
 			}
 		})
 		.tint(TYPE_COLORS[gameplan.activityType])
+		.onChange(of: [gameplan.rrule, gameplan.timeOfDay.description]) {
+			gameplan.scheduleNotification()
+		}
 	}
 }
 
