@@ -15,7 +15,6 @@
 		353DF1CA2B0876C600E6AE93 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */; };
 		3549B94D2AE7664A00736796 /* ordo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3549B94C2AE7664A00736796 /* ordo.json */; };
 		3549B94F2AE76B5A00736796 /* Ordo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549B94E2AE76B5A00736796 /* Ordo.swift */; };
-		3549B95A2AE84F0B00736796 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = 3549B9592AE84F0B00736796 /* SWXMLHash */; };
 		3549B95F2AE85DB100736796 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 3549B95E2AE85DB100736796 /* SwipeActions */; };
 		354B635B2AD08BCF00CC687A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 354B635A2AD08BCF00CC687A /* Localizable.xcstrings */; };
 		35587F6D2AD79F4300569112 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35587F6C2AD79F4300569112 /* String+Extensions.swift */; };
@@ -139,7 +138,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3549B95A2AE84F0B00736796 /* SWXMLHash in Frameworks */,
 				353DF1C82B0862A800E6AE93 /* GRDB in Frameworks */,
 				3549B95F2AE85DB100736796 /* SwipeActions in Frameworks */,
 				35D1E62D2A99823C004C9828 /* RWMRecurrenceRule in Frameworks */,
@@ -326,7 +324,6 @@
 			packageProductDependencies = (
 				35D1E62C2A99823C004C9828 /* RWMRecurrenceRule */,
 				35D1E6342A999099004C9828 /* SystemColors */,
-				3549B9592AE84F0B00736796 /* SWXMLHash */,
 				3549B95E2AE85DB100736796 /* SwipeActions */,
 				353DF1C72B0862A800E6AE93 /* GRDB */,
 			);
@@ -836,11 +833,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 353DF1C62B0862A800E6AE93 /* XCRemoteSwiftPackageReference "GRDB" */;
 			productName = GRDB;
-		};
-		3549B9592AE84F0B00736796 /* SWXMLHash */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3549B9582AE84F0B00736796 /* XCRemoteSwiftPackageReference "SWXMLHash" */;
-			productName = SWXMLHash;
 		};
 		3549B95E2AE85DB100736796 /* SwipeActions */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -63,7 +63,10 @@ let CommonPrayerSources: [Source] = [
 	.saintJoseph,
 	.saintMichael,
 ]
-let ScriptureSources: [Source] = [.dailyGospel, .bibleInAYear]
+let ScriptureSources: [Source] = [
+	.dailyGospel,
+//	.bibleInAYear
+]
 
 func createRecurrenceRule(frequency: EKRecurrenceFrequency = .weekly, byDayOfWeek: EKWeekday = .sunday) -> EKRecurrenceRule {
 	EKRecurrenceRule(

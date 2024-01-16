@@ -57,13 +57,12 @@ struct ActivityView: View {
 				HStack {
 					VStack(alignment: .leading) {
 						Text(subtitle)
-							.font(.headline)
+							.font(.system(.headline, design: .serif))
 							.foregroundStyle(TYPE_COLORS[activity.activityType] ?? Color.label)
 
 						Spacer().frame(height: 24)
 
 						Text(LocalizedStringKey(stringLiteral: text))
-							.font(.system(size: 20))
 							.tint(TYPE_COLORS[activity.activityType] ?? Color.label)
 					}
 
@@ -72,16 +71,19 @@ struct ActivityView: View {
 				.padding()
 				.padding(.bottom, 50)
 			}
-		}.navigationTitle(title)
+		}
+		.background(Color.systemGray6)
+		.navigationTitle(title)
+		.environment(\.font, .system(.body, design: .serif))
 	}
 }
 
 #Preview {
 	let activity = Activity(
 		id: UUID(),
-		activityType: .personalPrayer,
+		activityType: .conjugalPrayer,
 		date: .now,
-		source: .angelus,
+		source: .comeHolySpirit,
 		customSourceText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 		customSourceTitle: "Magnificat"
 	)

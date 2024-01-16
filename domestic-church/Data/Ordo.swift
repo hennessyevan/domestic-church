@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SWXMLHash
 
 struct OrdoJSON: Codable {
 	let YEAR_A: [String: OrdoEntry]
