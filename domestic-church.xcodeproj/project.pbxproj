@@ -29,42 +29,14 @@
 		35595B6F2B0C400E005E13A1 /* BibleReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35601CC52B084CF400C3B6C9 /* BibleReader.swift */; };
 		35595B702B0C4013005E13A1 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */; };
 		35595B712B0C4016005E13A1 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */; };
-		35595B722B0C4038005E13A1 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B11022A9AFC9B00A5A784 /* ActivityView.swift */; };
-		35595B732B0C4038005E13A1 /* GameplanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */; };
-		35595B752B0C403A005E13A1 /* GameplanCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E62E2A9985E6004C9828 /* GameplanCard.swift */; };
-		35595B762B0C403A005E13A1 /* GameplanForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6362A999675004C9828 /* GameplanForm.swift */; };
-		35595B772B0C403A005E13A1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35587F6C2AD79F4300569112 /* String+Extensions.swift */; };
-		35595B782B0C403A005E13A1 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6422A99AD35004C9828 /* ActivityCard.swift */; };
-		35595B792B0C403A005E13A1 /* MarqueeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526A67B2AF40E2C00903582 /* MarqueeText.swift */; };
-		35595B7A2B0C4042005E13A1 /* Romcal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6452A9A467A004C9828 /* Romcal.swift */; };
-		35595B7B2B0C4042005E13A1 /* ordo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3549B94C2AE7664A00736796 /* ordo.json */; };
-		35595B7C2B0C4042005E13A1 /* romcal3.js in Resources */ = {isa = PBXBuildFile; fileRef = 35FA96AD2A9DA47F003767EE /* romcal3.js */; };
-		35595B7D2B0C4042005E13A1 /* Ordo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549B94E2AE76B5A00736796 /* Ordo.swift */; };
-		35595B7E2B0C4042005E13A1 /* Canada_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F22AA2D711002B47D6 /* Canada_En.js */; };
-		35595B7F2B0C4042005E13A1 /* Recurrence+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F982AD61EB800999E19 /* Recurrence+Helpers.swift */; };
-		35595B802B0C4042005E13A1 /* BibleReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35601CC52B084CF400C3B6C9 /* BibleReader.swift */; };
-		35595B812B0C4042005E13A1 /* UnitedStates_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F42AA2E6D6002B47D6 /* UnitedStates_En.js */; };
-		35595B822B0C4045005E13A1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6302A99874F004C9828 /* Activity.swift */; };
-		35595B832B0C4045005E13A1 /* Gameplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35379F942AD61A6E00999E19 /* Gameplan.swift */; };
-		35595B842B0C4048005E13A1 /* RoundedTextEditorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */; };
-		35595B852B0C4048005E13A1 /* SecondaryGroupBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DC2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift */; };
-		35595B862B0C4048005E13A1 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458D82AF1E8BA00C5F58E /* TrailingIconLabelStyle.swift */; };
-		35595B872B0C4048005E13A1 /* ActivityTypeConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */; };
 		35595B882B0C409D005E13A1 /* nrsvce.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 35601CCB2B0858C300C3B6C9 /* nrsvce.sqlite */; };
-		35595B892B0C409E005E13A1 /* nrsvce.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 35601CCB2B0858C300C3B6C9 /* nrsvce.sqlite */; };
 		35595B8E2B0C40FA005E13A1 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B8D2B0C40FA005E13A1 /* GRDB */; };
-		35595B902B0C4118005E13A1 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B8F2B0C4118005E13A1 /* GRDB */; };
-		35595B922B0C414B005E13A1 /* RWMRecurrenceRule in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B912B0C414B005E13A1 /* RWMRecurrenceRule */; };
-		35595B942B0C414B005E13A1 /* SystemColors in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B932B0C414B005E13A1 /* SystemColors */; };
-		35595B962B0C414B005E13A1 /* SwipeActions in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B952B0C414B005E13A1 /* SwipeActions */; };
 		35595B982B0C4152005E13A1 /* RWMRecurrenceRule in Frameworks */ = {isa = PBXBuildFile; productRef = 35595B972B0C4152005E13A1 /* RWMRecurrenceRule */; };
 		35595B9B2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9A2B0C42A4005E13A1 /* GameplanFormSettings.swift */; };
 		35595B9C2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9A2B0C42A4005E13A1 /* GameplanFormSettings.swift */; };
-		35595B9D2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9A2B0C42A4005E13A1 /* GameplanFormSettings.swift */; };
 		35595B9F2B0C42C9005E13A1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9E2B0C42C9005E13A1 /* Notifications.swift */; };
 		35595BA12B0C5241005E13A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595BA02B0C5241005E13A1 /* Router.swift */; };
 		35595BA22B0C5241005E13A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595BA02B0C5241005E13A1 /* Router.swift */; };
-		35595BA32B0C5241005E13A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595BA02B0C5241005E13A1 /* Router.swift */; };
 		35601CC62B084CF400C3B6C9 /* BibleReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35601CC52B084CF400C3B6C9 /* BibleReader.swift */; };
 		35601CCC2B0858C300C3B6C9 /* nrsvce.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 35601CCB2B0858C300C3B6C9 /* nrsvce.sqlite */; };
 		358B11032A9AFC9B00A5A784 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B11022A9AFC9B00A5A784 /* ActivityView.swift */; };
@@ -72,10 +44,8 @@
 		35A458DB2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */; };
 		35A458DD2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DC2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift */; };
 		35A458DF2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */; };
-		35CB2FFB2B0D95EC009C89C4 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */; };
-		35CB2FFC2B0D95EF009C89C4 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */; };
+		35B5748B2B329E78000B5EC8 /* EventKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5748A2B329E78000B5EC8 /* EventKit+Extensions.swift */; };
 		35CB2FFD2B0D9605009C89C4 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9E2B0C42C9005E13A1 /* Notifications.swift */; };
-		35CB2FFE2B0D9605009C89C4 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35595B9E2B0C42C9005E13A1 /* Notifications.swift */; };
 		35CB2FFF2B0D962A009C89C4 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35587F6C2AD79F4300569112 /* String+Extensions.swift */; };
 		35D1E5F52A996CCE004C9828 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5F42A996CCE004C9828 /* App.swift */; };
 		35D1E5FC2A996CCE004C9828 /* GameplanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */; };
@@ -91,6 +61,14 @@
 		35D1E6402A99ACDA004C9828 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */; };
 		35D1E6432A99AD35004C9828 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6422A99AD35004C9828 /* ActivityCard.swift */; };
 		35D1E6462A9A467A004C9828 /* Romcal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E6452A9A467A004C9828 /* Romcal.swift */; };
+		35F1082A2B1820B20003FA16 /* JsonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F108292B1820B20003FA16 /* JsonFormView.swift */; };
+		35F108302B1821160003FA16 /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1082D2B1821160003FA16 /* ViewType.swift */; };
+		35F108322B1821160003FA16 /* ViewDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1082F2B1821160003FA16 /* ViewDecoder.swift */; };
+		35F108342B1821220003FA16 /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F108332B1821220003FA16 /* Modifier.swift */; };
+		35F108362B18212B0003FA16 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F108352B18212B0003FA16 /* JSONHelper.swift */; };
+		35F108382B18213B0003FA16 /* CustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F108372B18213B0003FA16 /* CustomModifier.swift */; };
+		35F1083A2B1821900003FA16 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F108392B1821900003FA16 /* Color+Extensions.swift */; };
+		35F1083F2B1822000003FA16 /* ViewNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1083E2B1821FF0003FA16 /* ViewNode.swift */; };
 		35F576F12AA2C5E3002B47D6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */; };
 		35F576F32AA2D711002B47D6 /* Canada_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F22AA2D711002B47D6 /* Canada_En.js */; };
 		35F576F52AA2E6D6002B47D6 /* UnitedStates_En.js in Resources */ = {isa = PBXBuildFile; fileRef = 35F576F42AA2E6D6002B47D6 /* UnitedStates_En.js */; };
@@ -99,13 +77,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		35D1E6082A996CCF004C9828 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 35D1E5E92A996CCE004C9828 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 35D1E5F02A996CCE004C9828;
-			remoteInfo = "domestic-church";
-		};
-		35D1E6122A996CCF004C9828 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 35D1E5E92A996CCE004C9828 /* Project object */;
 			proxyType = 1;
@@ -134,7 +105,7 @@
 		35A458DA2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextEditorStyle.swift; sourceTree = "<group>"; };
 		35A458DC2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryGroupBoxStyle.swift; sourceTree = "<group>"; };
 		35A458DE2AF1F7C200C5F58E /* ActivityTypeConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeConfigurations.swift; sourceTree = "<group>"; };
-		35CB30002B0D9713009C89C4 /* domestic-church.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "domestic-church.xctestplan"; sourceTree = "<group>"; };
+		35B5748A2B329E78000B5EC8 /* EventKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventKit+Extensions.swift"; sourceTree = "<group>"; };
 		35D1E5F12A996CCE004C9828 /* domestic-church.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "domestic-church.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1E5F42A996CCE004C9828 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		35D1E5FB2A996CCE004C9828 /* GameplanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanScreen.swift; sourceTree = "<group>"; };
@@ -143,13 +114,20 @@
 		35D1E6012A996CCF004C9828 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35D1E6072A996CCF004C9828 /* domestic-churchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "domestic-churchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1E60B2A996CCF004C9828 /* romcalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = romcalTests.swift; sourceTree = "<group>"; };
-		35D1E6112A996CCF004C9828 /* domestic-churchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "domestic-churchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1E62E2A9985E6004C9828 /* GameplanCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanCard.swift; sourceTree = "<group>"; };
 		35D1E6302A99874F004C9828 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		35D1E6362A999675004C9828 /* GameplanForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplanForm.swift; sourceTree = "<group>"; };
 		35D1E63F2A99ACDA004C9828 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		35D1E6422A99AD35004C9828 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		35D1E6452A9A467A004C9828 /* Romcal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Romcal.swift; sourceTree = "<group>"; };
+		35F108292B1820B20003FA16 /* JsonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFormView.swift; sourceTree = "<group>"; };
+		35F1082D2B1821160003FA16 /* ViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
+		35F1082F2B1821160003FA16 /* ViewDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDecoder.swift; sourceTree = "<group>"; };
+		35F108332B1821220003FA16 /* Modifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
+		35F108352B18212B0003FA16 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
+		35F108372B18213B0003FA16 /* CustomModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModifier.swift; sourceTree = "<group>"; };
+		35F108392B1821900003FA16 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		35F1083E2B1821FF0003FA16 /* ViewNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNode.swift; sourceTree = "<group>"; };
 		35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		35F576F22AA2D711002B47D6 /* Canada_En.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Canada_En.js; sourceTree = "<group>"; };
 		35F576F42AA2E6D6002B47D6 /* UnitedStates_En.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = UnitedStates_En.js; sourceTree = "<group>"; };
@@ -175,17 +153,6 @@
 			files = (
 				35595B8E2B0C40FA005E13A1 /* GRDB in Frameworks */,
 				35595B982B0C4152005E13A1 /* RWMRecurrenceRule in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		35D1E60E2A996CCF004C9828 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				35595B942B0C414B005E13A1 /* SystemColors in Frameworks */,
-				35595B962B0C414B005E13A1 /* SwipeActions in Frameworks */,
-				35595B902B0C4118005E13A1 /* GRDB in Frameworks */,
-				35595B922B0C414B005E13A1 /* RWMRecurrenceRule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,9 +190,11 @@
 		35CB2FFA2B0D95DA009C89C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				35F108392B1821900003FA16 /* Color+Extensions.swift */,
 				35587F6C2AD79F4300569112 /* String+Extensions.swift */,
 				353DF1C92B0876C600E6AE93 /* Array+Extensions.swift */,
 				35F576F02AA2C5E3002B47D6 /* Date+Extensions.swift */,
+				35B5748A2B329E78000B5EC8 /* EventKit+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,10 +202,8 @@
 		35D1E5E82A996CCE004C9828 = {
 			isa = PBXGroup;
 			children = (
-				35CB30002B0D9713009C89C4 /* domestic-church.xctestplan */,
 				35D1E5F32A996CCE004C9828 /* domestic-church */,
 				35D1E60A2A996CCF004C9828 /* domestic-churchTests */,
-				35D1E6142A996CCF004C9828 /* domestic-churchUITests */,
 				35D1E5F22A996CCE004C9828 /* Products */,
 				35595B8A2B0C40FA005E13A1 /* Frameworks */,
 			);
@@ -247,7 +214,6 @@
 			children = (
 				35D1E5F12A996CCE004C9828 /* domestic-church.app */,
 				35D1E6072A996CCF004C9828 /* domestic-churchTests.xctest */,
-				35D1E6112A996CCF004C9828 /* domestic-churchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,13 +255,6 @@
 			path = "domestic-churchTests";
 			sourceTree = "<group>";
 		};
-		35D1E6142A996CCF004C9828 /* domestic-churchUITests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "domestic-churchUITests";
-			sourceTree = "<group>";
-		};
 		35D1E6242A997106004C9828 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +268,7 @@
 		35D1E6252A99711A004C9828 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				35F1083D2B1821EE0003FA16 /* JSON Form */,
 				35D1E62E2A9985E6004C9828 /* GameplanCard.swift */,
 				35D1E6362A999675004C9828 /* GameplanForm.swift */,
 				35D1E6422A99AD35004C9828 /* ActivityCard.swift */,
@@ -331,6 +291,20 @@
 				35601CC52B084CF400C3B6C9 /* BibleReader.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		35F1083D2B1821EE0003FA16 /* JSON Form */ = {
+			isa = PBXGroup;
+			children = (
+				35F108372B18213B0003FA16 /* CustomModifier.swift */,
+				35F108292B1820B20003FA16 /* JsonFormView.swift */,
+				35F108352B18212B0003FA16 /* JSONHelper.swift */,
+				35F108332B1821220003FA16 /* Modifier.swift */,
+				35F1082F2B1821160003FA16 /* ViewDecoder.swift */,
+				35F1083E2B1821FF0003FA16 /* ViewNode.swift */,
+				35F1082D2B1821160003FA16 /* ViewType.swift */,
+			);
+			path = "JSON Form";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,30 +356,6 @@
 			productReference = 35D1E6072A996CCF004C9828 /* domestic-churchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		35D1E6102A996CCF004C9828 /* domestic-churchUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 35D1E6212A996CCF004C9828 /* Build configuration list for PBXNativeTarget "domestic-churchUITests" */;
-			buildPhases = (
-				35D1E60D2A996CCF004C9828 /* Sources */,
-				35D1E60E2A996CCF004C9828 /* Frameworks */,
-				35D1E60F2A996CCF004C9828 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				35D1E6132A996CCF004C9828 /* PBXTargetDependency */,
-			);
-			name = "domestic-churchUITests";
-			packageProductDependencies = (
-				35595B8F2B0C4118005E13A1 /* GRDB */,
-				35595B912B0C414B005E13A1 /* RWMRecurrenceRule */,
-				35595B932B0C414B005E13A1 /* SystemColors */,
-				35595B952B0C414B005E13A1 /* SwipeActions */,
-			);
-			productName = "domestic-churchUITests";
-			productReference = 35D1E6112A996CCF004C9828 /* domestic-churchUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -420,10 +370,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					35D1E6062A996CCF004C9828 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = 35D1E5F02A996CCE004C9828;
-					};
-					35D1E6102A996CCF004C9828 = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 35D1E5F02A996CCE004C9828;
 					};
@@ -451,7 +397,6 @@
 			targets = (
 				35D1E5F02A996CCE004C9828 /* domestic-church */,
 				35D1E6062A996CCF004C9828 /* domestic-churchTests */,
-				35D1E6102A996CCF004C9828 /* domestic-churchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -484,18 +429,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35D1E60F2A996CCF004C9828 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				35595B812B0C4042005E13A1 /* UnitedStates_En.js in Resources */,
-				35595B7E2B0C4042005E13A1 /* Canada_En.js in Resources */,
-				35595B892B0C409E005E13A1 /* nrsvce.sqlite in Resources */,
-				35595B7C2B0C4042005E13A1 /* romcal3.js in Resources */,
-				35595B7B2B0C4042005E13A1 /* ordo.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -504,17 +437,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				35D1E62F2A9985E6004C9828 /* GameplanCard.swift in Sources */,
+				35F1083F2B1822000003FA16 /* ViewNode.swift in Sources */,
 				35D1E5F52A996CCE004C9828 /* App.swift in Sources */,
 				35F576F12AA2C5E3002B47D6 /* Date+Extensions.swift in Sources */,
 				35D1E6462A9A467A004C9828 /* Romcal.swift in Sources */,
 				35601CC62B084CF400C3B6C9 /* BibleReader.swift in Sources */,
+				35F1083A2B1821900003FA16 /* Color+Extensions.swift in Sources */,
 				35595B9B2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */,
 				35379F992AD61EB800999E19 /* Recurrence+Helpers.swift in Sources */,
 				35A458DD2AF1F22000C5F58E /* SecondaryGroupBoxStyle.swift in Sources */,
+				35F108362B18212B0003FA16 /* JSONHelper.swift in Sources */,
 				35379F952AD61A6E00999E19 /* Gameplan.swift in Sources */,
 				358B11032A9AFC9B00A5A784 /* ActivityView.swift in Sources */,
 				35587F6D2AD79F4300569112 /* String+Extensions.swift in Sources */,
+				35F1082A2B1820B20003FA16 /* JsonFormView.swift in Sources */,
+				35F108342B1821220003FA16 /* Modifier.swift in Sources */,
 				353DF1CA2B0876C600E6AE93 /* Array+Extensions.swift in Sources */,
+				35F108382B18213B0003FA16 /* CustomModifier.swift in Sources */,
 				35D1E6432A99AD35004C9828 /* ActivityCard.swift in Sources */,
 				35A458DB2AF1EE6100C5F58E /* RoundedTextEditorStyle.swift in Sources */,
 				35D1E5FC2A996CCE004C9828 /* GameplanScreen.swift in Sources */,
@@ -525,7 +464,10 @@
 				35D1E6402A99ACDA004C9828 /* HomeScreen.swift in Sources */,
 				35595B9F2B0C42C9005E13A1 /* Notifications.swift in Sources */,
 				3526A67C2AF40E2C00903582 /* MarqueeText.swift in Sources */,
+				35B5748B2B329E78000B5EC8 /* EventKit+Extensions.swift in Sources */,
+				35F108302B1821160003FA16 /* ViewType.swift in Sources */,
 				35D1E6312A99874F004C9828 /* Activity.swift in Sources */,
+				35F108322B1821160003FA16 /* ViewDecoder.swift in Sources */,
 				35D1E6372A999675004C9828 /* GameplanForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,35 +492,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35D1E60D2A996CCF004C9828 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				35595B822B0C4045005E13A1 /* Activity.swift in Sources */,
-				35595B752B0C403A005E13A1 /* GameplanCard.swift in Sources */,
-				35CB2FFB2B0D95EC009C89C4 /* Date+Extensions.swift in Sources */,
-				35CB2FFC2B0D95EF009C89C4 /* Array+Extensions.swift in Sources */,
-				35595B732B0C4038005E13A1 /* GameplanScreen.swift in Sources */,
-				35595B782B0C403A005E13A1 /* ActivityCard.swift in Sources */,
-				35595B862B0C4048005E13A1 /* TrailingIconLabelStyle.swift in Sources */,
-				35595B762B0C403A005E13A1 /* GameplanForm.swift in Sources */,
-				35595B852B0C4048005E13A1 /* SecondaryGroupBoxStyle.swift in Sources */,
-				35595B802B0C4042005E13A1 /* BibleReader.swift in Sources */,
-				35595B7F2B0C4042005E13A1 /* Recurrence+Helpers.swift in Sources */,
-				35595B872B0C4048005E13A1 /* ActivityTypeConfigurations.swift in Sources */,
-				35595B7D2B0C4042005E13A1 /* Ordo.swift in Sources */,
-				35595BA32B0C5241005E13A1 /* Router.swift in Sources */,
-				35595B772B0C403A005E13A1 /* String+Extensions.swift in Sources */,
-				35595B842B0C4048005E13A1 /* RoundedTextEditorStyle.swift in Sources */,
-				35595B792B0C403A005E13A1 /* MarqueeText.swift in Sources */,
-				35595B9D2B0C42A4005E13A1 /* GameplanFormSettings.swift in Sources */,
-				35CB2FFE2B0D9605009C89C4 /* Notifications.swift in Sources */,
-				35595B7A2B0C4042005E13A1 /* Romcal.swift in Sources */,
-				35595B832B0C4045005E13A1 /* Gameplan.swift in Sources */,
-				35595B722B0C4038005E13A1 /* ActivityView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -586,11 +499,6 @@
 			isa = PBXTargetDependency;
 			target = 35D1E5F02A996CCE004C9828 /* domestic-church */;
 			targetProxy = 35D1E6082A996CCF004C9828 /* PBXContainerItemProxy */;
-		};
-		35D1E6132A996CCF004C9828 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 35D1E5F02A996CCE004C9828 /* domestic-church */;
-			targetProxy = 35D1E6122A996CCF004C9828 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -848,52 +756,6 @@
 			};
 			name = Release;
 		};
-		35D1E6222A996CCF004C9828 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 4CUBSV9SX3;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hennessyevan.domestic-churchUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "domestic-church";
-			};
-			name = Debug;
-		};
-		35D1E6232A996CCF004C9828 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 4CUBSV9SX3;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hennessyevan.domestic-churchUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "domestic-church";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -920,15 +782,6 @@
 			buildConfigurations = (
 				35D1E61F2A996CCF004C9828 /* Debug */,
 				35D1E6202A996CCF004C9828 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		35D1E6212A996CCF004C9828 /* Build configuration list for PBXNativeTarget "domestic-churchUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				35D1E6222A996CCF004C9828 /* Debug */,
-				35D1E6232A996CCF004C9828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -998,26 +851,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 353DF1C62B0862A800E6AE93 /* XCRemoteSwiftPackageReference "GRDB" */;
 			productName = GRDB;
-		};
-		35595B8F2B0C4118005E13A1 /* GRDB */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 353DF1C62B0862A800E6AE93 /* XCRemoteSwiftPackageReference "GRDB" */;
-			productName = GRDB;
-		};
-		35595B912B0C414B005E13A1 /* RWMRecurrenceRule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 35D1E62B2A99823C004C9828 /* XCRemoteSwiftPackageReference "RWMRecurrenceRule" */;
-			productName = RWMRecurrenceRule;
-		};
-		35595B932B0C414B005E13A1 /* SystemColors */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 35D1E6332A999099004C9828 /* XCRemoteSwiftPackageReference "swiftui-system-colors" */;
-			productName = SystemColors;
-		};
-		35595B952B0C414B005E13A1 /* SwipeActions */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3549B95D2AE85DB100736796 /* XCRemoteSwiftPackageReference "SwipeActions" */;
-			productName = SwipeActions;
 		};
 		35595B972B0C4152005E13A1 /* RWMRecurrenceRule */ = {
 			isa = XCSwiftPackageProductDependency;

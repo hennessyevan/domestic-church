@@ -1,11 +1,90 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "..." : {
+
+    },
     "%@" : {
 
     },
+    "%@ at %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ at %2$@"
+          }
+        }
+      }
+    },
+    "angelus" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angelus"
+          }
+        }
+      }
+    },
+    "angelusText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**The angel of the Lord declared unto Mary.**\n*And she conceived of the Holy Spirit.*\nHail Mary . . .\n\n**Behold the handmaid of the Lord.**\n*Be it done unto me according to thy word.*\nHail Mary …\n\n**And the Word was made flesh.**\n*And dwelt among us.*\nHail Mary …\n\n**Pray for us, O holy Mother of God.**\n*That we may be made worthy of the promises of Christ.*\n\n**Let us pray**\nPour forth, we beseech thee, O Lord, thy grace into our hearts; that, we to whom the incarnation of Christ, thy Son, was made known by the message of an angel, may by his passion and cross, be brought to the glory of his resurrection, through the same Christ our Lord.\n\nAmen"
+          }
+        }
+      }
+    },
+    "animaChristi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anima Christi"
+          }
+        }
+      }
+    },
+    "animaChristiText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anima Christi"
+          }
+        }
+      }
+    },
     "Are you sure you want to delete this gameplan?" : {
 
+    },
+    "benedictus" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benedictus"
+          }
+        }
+      }
+    },
+    "benedictusText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benedictus"
+          }
+        }
+      }
     },
     "bibleInAYear" : {
       "extractionState" : "manual",
@@ -21,8 +100,33 @@
     "Cancel" : {
 
     },
+    "Check In" : {
+
+    },
     "Clear Notifications" : {
 
+    },
+    "comeHolySpirit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Come Holy Spirit"
+          }
+        }
+      }
+    },
+    "comeHolySpiritText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Come Holy Spirit"
+          }
+        }
+      }
     },
     "conjugalPrayer" : {
       "extractionState" : "manual",
@@ -75,6 +179,28 @@
     "Enter some text" : {
 
     },
+    "eveningPrayer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evening Prayer"
+          }
+        }
+      }
+    },
+    "eveningPrayerText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evening Prayer"
+          }
+        }
+      }
+    },
     "familyPrayer" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -95,11 +221,171 @@
     "Go to activity" : {
 
     },
+    "guardianAngel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardian Angel"
+          }
+        }
+      }
+    },
+    "guardianAngelText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardian Angel"
+          }
+        }
+      }
+    },
+    "hailHolyQueen" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hail Holy Queen"
+          }
+        }
+      }
+    },
+    "hailHolyQueenText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hail Holy Queen"
+          }
+        }
+      }
+    },
+    "hailMary" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hail Mary"
+          }
+        }
+      }
+    },
+    "hailMaryText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hail, Mary, full of grace,\nthe Lord is with thee.\nBlessed art thou amongst women\nand blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners,\nnow and at the hour of our death. \nAmen."
+          }
+        }
+      }
+    },
     "Home" : {
 
     },
+    "Label" : {
+
+    },
+    "magnificat" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Magnificat"
+          }
+        }
+      }
+    },
+    "magnificatText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Magnificat"
+          }
+        }
+      }
+    },
+    "memorare" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memorare"
+          }
+        }
+      }
+    },
+    "memorareText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memorare"
+          }
+        }
+      }
+    },
+    "morningOffering" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morning Offering"
+          }
+        }
+      }
+    },
+    "morningOfferingText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morning Offering"
+          }
+        }
+      }
+    },
     "Next" : {
 
+    },
+    "no image data provided" : {
+
+    },
+    "ourFather" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Our Father"
+          }
+        }
+      }
+    },
+    "ourFatherText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+          }
+        }
+      }
     },
     "personalPrayer" : {
       "extractionState" : "manual",
@@ -114,6 +400,50 @@
     },
     "Press + to add a gameplan" : {
 
+    },
+    "saintJoseph" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saint Joseph"
+          }
+        }
+      }
+    },
+    "saintJosephText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saint Joseph"
+          }
+        }
+      }
+    },
+    "saintMichael" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saint Michael"
+          }
+        }
+      }
+    },
+    "saintMichaelText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saint Michael"
+          }
+        }
+      }
     },
     "scripture" : {
       "extractionState" : "manual",
