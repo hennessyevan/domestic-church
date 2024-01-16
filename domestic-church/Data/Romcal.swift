@@ -34,6 +34,8 @@ let regionLocaleDict = [
 
 class Romcal: ObservableObject {
 	@Published var context: JSContext!
+	
+	static let shared = Romcal()
 
 	#if DEBUG
 	static var preview: Romcal { Romcal() }

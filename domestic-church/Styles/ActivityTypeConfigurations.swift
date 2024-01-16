@@ -18,8 +18,8 @@ let TYPE_TITLES: [ActivityType: String] = [
 let TYPE_COLORS: [ActivityType: Color] = [
 	.scripture: Color("scripture"),
 	.personalPrayer: Color("personalPrayer"),
-	.conjugalPrayer: Color("personalPrayer"),
-	.familyPrayer: Color("personalPrayer"),
+	.conjugalPrayer: Color("conjugalPrayer"),
+	.familyPrayer: Color("familyPrayer"),
 ]
 
 let TYPE_ICONS: [ActivityType: String] = [

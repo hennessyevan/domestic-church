@@ -21,12 +21,49 @@ enum ActivityType: String, CaseIterable, Codable, Identifiable {
 }
 
 enum Source: String, CaseIterable, Codable, Identifiable {
+	/// Scripture
 	case dailyGospel
 	case bibleInAYear
+	/// Prayer
+	case ourFather
+	case hailMary
+	case guardianAngel
+	case morningOffering
+	case angelus
+	case hailHolyQueen
+	case benedictus
+	case magnificat
+	case memorare
+	case eveningPrayer
+	case animaChristi
+	case comeHolySpirit
+	case saintJoseph
+	case saintMichael
+
 	case custom
 
 	var id: Source { self }
 }
+
+let CommonPrayerSources: [Source] = [
+	.ourFather,
+	.hailMary,
+	.ourFather,
+	.hailMary,
+	.guardianAngel,
+	.morningOffering,
+	.angelus,
+	.hailHolyQueen,
+	.benedictus,
+	.magnificat,
+	.memorare,
+	.eveningPrayer,
+	.animaChristi,
+	.comeHolySpirit,
+	.saintJoseph,
+	.saintMichael,
+]
+let ScriptureSources: [Source] = [.dailyGospel, .bibleInAYear]
 
 func createRecurrenceRule(frequency: EKRecurrenceFrequency = .weekly, byDayOfWeek: EKWeekday = .sunday) -> EKRecurrenceRule {
 	EKRecurrenceRule(
@@ -64,7 +101,7 @@ public final class Gameplan {
 		self.createdAt = Date()
 	}
 
-	private var rruleObject: EKRecurrenceRule {
+	var rruleObject: EKRecurrenceRule {
 		if let rrule {
 			return EKRecurrenceRule(recurrenceWith: rrule) ?? defaultRule
 		} else {
@@ -90,7 +127,7 @@ public final class Gameplan {
 	var nextOccurrence: Activity? {
 		let parser = RWMRuleParser()
 
-		if let rrule = rrule, let rules = parser.parse(rule: rrule) {
+		if let rrule, let rules = parser.parse(rule: rrule) {
 			let scheduler = RWMRuleScheduler()
 			let calendar = Calendar.current
 			let timeOfDay = calendar.dateComponents([.hour, .minute, .second], from: timeOfDay)
@@ -117,18 +154,16 @@ public final class Gameplan {
 	var notificationDateComponents: DateComponents? {
 		let calendar = Calendar.current
 		var dateComponents = DateComponents()
-		let timeComponents = calendar.dateComponents([.day, .hour, .minute], from: self.timeOfDay)
-		
+		let timeComponents = calendar.dateComponents([.day, .hour, .minute], from: timeOfDay)
+
 		dateComponents.hour = timeComponents.hour
 		dateComponents.minute = timeComponents.minute
 		dateComponents.timeZone = calendar.timeZone
-		
+
 		if rruleObject.frequency == .weekly {
 			dateComponents.weekday = rruleObject.daysOfTheWeek?.first.hashValue
 		}
-		
+
 		return dateComponents
 	}
 }
-
-

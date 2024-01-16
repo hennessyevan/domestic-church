@@ -16,14 +16,16 @@ struct DefaultFormSettings: FormSettings {
 }
 
 struct ScriptureFormSettings: FormSettings {
-	var sources: [Source] = [.dailyGospel, .bibleInAYear]
+	var sources: [Source] = ScriptureSources
 }
 
-struct PersonalPrayerFormSettings: FormSettings {
-	var sources: [Source] = [.custom]
+struct PrayerFormSettings: FormSettings {
+	var sources: [Source] = CommonPrayerSources + [.custom]
 }
 
 var formSettingsForActivityType: [ActivityType: FormSettings] = [
 	.scripture: ScriptureFormSettings(),
-	.personalPrayer: PersonalPrayerFormSettings(),
+	.personalPrayer: PrayerFormSettings(),
+	.conjugalPrayer: PrayerFormSettings(),
+	.familyPrayer: PrayerFormSettings(),
 ]

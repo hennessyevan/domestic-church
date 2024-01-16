@@ -21,16 +21,32 @@ struct GameplanCard: View {
 	var body: some View {
 		VStack {
 			HStack {
-				Image(systemName: TYPE_ICONS[type]!)
-					.foregroundColor(TYPE_COLORS[type]!)
-					.font(.system(size: 14))
-				Text(TYPE_TITLES[type]!)
-					.font(.headline)
-					.foregroundColor(TYPE_COLORS[type]!)
+				VStack {
+					Image(systemName: TYPE_ICONS[type]!)
+						.foregroundColor(TYPE_COLORS[type]!)
+						.font(.subheadline)
+						.frame(height: 16)
+					Spacer()
+				}
+
+				VStack(alignment: .leading) {
+					Text(TYPE_TITLES[type]!)
+						.font(.headline)
+						.foregroundColor(TYPE_COLORS[type]!)
+						.frame(height: 16)
+
+					Text("\(gameplan.rruleObject.description) at \(gameplan.timeOfDay.formatted(date: .omitted, time: .shortened))")
+						.font(.caption)
+						.foregroundColor(.gray)
+				}
+				
+				Spacer()
+
 				Image(systemName: "chevron.forward")
 					.font(.system(size: 14))
 					.rotationEffect(Angle(degrees: expanded ? 90 : 0))
-				Spacer()
+					.padding(.trailing)
+				
 			}
 			.padding(.vertical, 8)
 			.contentShape(Rectangle())

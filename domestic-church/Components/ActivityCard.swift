@@ -30,7 +30,7 @@ struct ActivityCard: View {
 						.foregroundColor(TYPE_COLORS[type]!)
 						.font(.system(size: 14))
 
-					Text(self.cardTitle)
+					Text(cardTitle)
 						.font(.headline)
 						.foregroundColor(TYPE_COLORS[type]!)
 
@@ -71,7 +71,7 @@ struct ActivityCard: View {
 		switch source {
 		case .dailyGospel, .bibleInAYear:
 			return source.rawValue.localized
-		case .custom:
+		default:
 			return activity.activityType.rawValue.localized
 		}
 	}
@@ -88,6 +88,8 @@ struct ActivityCard: View {
 			return "FIXME"
 		case .custom:
 			return activity.customSourceTitle.isEmpty ? source.rawValue.localized : activity.customSourceTitle
+		default:
+			return source.rawValue.localized
 		}
 	}
 }
@@ -112,8 +114,8 @@ private let timeFormatter: DateFormatter = {
 		Activity(id: UUID(), activityType: .scripture, date: Date().advanced(by: 60000), source: .dailyGospel),
 		Activity(id: UUID(), activityType: .personalPrayer, date: .now, source: .custom),
 		Activity(id: UUID(), activityType: .personalPrayer, date: .now, source: .custom, customSourceTitle: "Magnificat"),
-		Activity(id: UUID(), activityType: .conjugalPrayer, date: .now),
-		Activity(id: UUID(), activityType: .familyPrayer, date: .now),
+		Activity(id: UUID(), activityType: .conjugalPrayer, date: .now, source: .ourFather),
+		Activity(id: UUID(), activityType: .familyPrayer, date: .now.advanced(by: 100000), source: .hailMary),
 	]
 
 	return VStack(alignment: .leading) {

@@ -30,3 +30,4 @@ public func recurrenceFrequencyToString(_ frequency: EKRecurrenceFrequency) -> S
 	default: return "Unknown" // Handle unexpected cases
 	}
 }
+

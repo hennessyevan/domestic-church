@@ -68,10 +68,22 @@ class Ordo {
 	
 	func getOrdoEntry(for liturgicalDate: Romcal.LiturgicalDate) -> OrdoEntry? {
 		let id = liturgicalDate.id
-		let cycle: Romcal.Cycle = liturgicalDate.calendar.dayOfWeek == 0 ? .sundayCycle(liturgicalDate.cycles.sundayCycle) : .weekdayCycle(liturgicalDate.cycles.weekdayCycle)
-		let ordoCycle = getOrdo(for: cycle)
+
+		let cycles: [Romcal.Cycle] = liturgicalDate.calendar.dayOfWeek == 0
+			? [.sundayCycle(liturgicalDate.cycles.sundayCycle), .weekdayCycle(liturgicalDate.cycles.weekdayCycle)]
+			: [.sundayCycle(liturgicalDate.cycles.sundayCycle), .weekdayCycle(liturgicalDate.cycles.weekdayCycle)]
 		
-		return ordoCycle.first(where: { $0.key == id })?.value
+		let cycle = cycles.first(where: { cycle in
+			let ordoCycle = getOrdo(for: cycle)
+			let gospel = ordoCycle.first(where: { $0.key == id })?.value.gospel
+			return gospel?.range != nil
+		})
+		
+		if let cycle {
+			return getOrdo(for: cycle).first(where: { $0.key == id })?.value
+		}
+		
+		return nil
 	}
 	
 	func getPassage(for liturgicalDate: Romcal.LiturgicalDate, reading: Reading) -> Passage? {

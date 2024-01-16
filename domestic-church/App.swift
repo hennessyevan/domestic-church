@@ -27,9 +27,9 @@ struct domestic_churchApp: App {
 					.tabItem { Label("Home", systemImage: "house.fill") }
 					.tag(Tab.home)
 
-//				HStack {}.tabItem {
-//					Label("Check In", systemImage: "person.badge.shield.checkmark.fill")
-//				}.tag(Tab.checkin)
+				JsonFormView(json: testjson).tabItem {
+					Label("Check In", systemImage: "person.badge.shield.checkmark.fill")
+				}.tag(Tab.checkin)
 
 				GameplanView(router: $router)
 					.tabItem { Label("Gameplan", systemImage: "list.bullet.rectangle.portrait.fill") }

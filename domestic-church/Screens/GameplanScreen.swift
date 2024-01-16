@@ -13,6 +13,7 @@ import SystemColors
 @Observable
 class GameplanScreenViewModel {
 	var expandedId: PersistentIdentifier?
+	var isNewItemDialogShown: Bool = false
 }
 
 struct GameplanView: View {
@@ -20,8 +21,6 @@ struct GameplanView: View {
 	@Environment(\.modelContext) private var modelContext
 
 	@Query(sort: \Gameplan.createdAt, order: .forward, animation: .default) private var gameplans: [Gameplan]
-
-	@State private var isNewItemDialogShown = false
 
 	@State var viewModel = GameplanScreenViewModel()
 
@@ -60,12 +59,12 @@ struct GameplanView: View {
 			.navigationTitle("Gameplan")
 			.toolbar {
 				ToolbarItem(placement: .automatic) {
-					Button(action: { isNewItemDialogShown = true }) {
+					Button(action: { viewModel.isNewItemDialogShown = true }) {
 						Image(systemName: "plus")
 					}
 				}
 			}
-			.confirmationDialog("What type?", isPresented: $isNewItemDialogShown) {
+			.confirmationDialog("What type?", isPresented: $viewModel.isNewItemDialogShown) {
 				ForEach(ActivityType.allCases) { activityType in
 					Button(activityType.rawValue.localized) { self.addGameplan(with: activityType) }
 				}
@@ -160,7 +159,12 @@ private let itemFormatter: DateFormatter = {
 	let config = ModelConfiguration(isStoredInMemoryOnly: true)
 	let container = try! ModelContainer(for: Gameplan.self, configurations: config)
 
-	[Gameplan(activityType: .personalPrayer), Gameplan(activityType: .scripture)].forEach {
+	[
+		Gameplan(activityType: .personalPrayer),
+		Gameplan(activityType: .scripture),
+		Gameplan(activityType: .conjugalPrayer),
+		Gameplan(activityType: .familyPrayer),
+	].forEach {
 		container.mainContext.insert($0)
 	}
 
