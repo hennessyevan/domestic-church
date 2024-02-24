@@ -10,7 +10,7 @@ import SwiftUI
 import SystemColors
 
 struct GameplanCard: View {
-	var gameplan: Gameplan
+	@ObservedObject var gameplan: Gameplan
 
 	var type: ActivityType { gameplan.activityType }
 
@@ -39,14 +39,13 @@ struct GameplanCard: View {
 						.font(.caption)
 						.foregroundColor(.gray)
 				}
-				
+
 				Spacer()
 
 				Image(systemName: "chevron.forward")
 					.font(.system(size: 14))
 					.rotationEffect(Angle(degrees: expanded ? 90 : 0))
 					.padding(.trailing)
-				
 			}
 			.padding(.vertical, 8)
 			.contentShape(Rectangle())
@@ -69,30 +68,25 @@ struct GameplanCard: View {
 	}
 }
 
-#Preview {
-	do {
-		let config = ModelConfiguration(isStoredInMemoryOnly: true)
-		let container = try ModelContainer(for: Gameplan.self, configurations: config)
-
-		let examples = [
-			Gameplan(activityType: .scripture),
-			Gameplan(activityType: .personalPrayer),
-			Gameplan(activityType: .conjugalPrayer),
-			Gameplan(activityType: .familyPrayer)
-		]
-
-		return VStack {
-			ForEach(examples, id: \.activityType) { gameplan in
-				GameplanCard(gameplan: gameplan)
-					.modelContainer(container)
-			}
-		}
-		.padding(.all)
-		.frame(minHeight: 0, maxHeight: .infinity)
-		#if os(iOS)
-			.background(Color(uiColor: UIColor.systemGroupedBackground))
-		#endif
-	} catch {
-		fatalError("Fatal Error")
-	}
-}
+// #Preview {
+//	do {
+//		let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//		let container = try ModelContainer(for: Gameplan.self, configurations: config)
+//
+//		let examples = Gamepl
+//
+//		return VStack {
+//			ForEach(examples, id: \.activityType) { gameplan in
+//				GameplanCard(gameplan: gameplan)
+//					.modelContainer(container)
+//			}
+//		}
+//		.padding(.all)
+//		.frame(minHeight: 0, maxHeight: .infinity)
+//		#if os(iOS)
+//			.background(Color(uiColor: UIColor.systemGroupedBackground))
+//		#endif
+//	} catch {
+//		fatalError("Fatal Error")
+//	}
+// }

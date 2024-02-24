@@ -9,6 +9,8 @@ import SwiftData
 import SwiftUI
 import SystemColors
 
+import EventKit
+
 struct LiturgicalDayView: View {
 	@EnvironmentObject var romcal: Romcal
 	@Environment(\.scenePhase) var scenePhase
@@ -32,7 +34,7 @@ struct LiturgicalDayView: View {
 				//				Spacer()
 			}
 			.frame(minWidth: 100, maxWidth: .infinity)
-			.padding(.all)
+			.padding(.all, 16)
 			.foregroundStyle(romcal.color(from: today.colors.first))
 			.background(romcal.color(from: today.colors.first).opacity(0.1))
 			.clipShape(RoundedRectangle(cornerRadius: 50))
@@ -43,11 +45,14 @@ struct LiturgicalDayView: View {
 struct HomeScreen: View {
 	@Binding var router: Router
 
-	@Environment(\.modelContext) private var modelContext
 	@Environment(\.scenePhase) private var scenePhase
 
 	@State private var reload = 0
-	@Query(sort: \Gameplan.createdAt, order: .forward, animation: .default) private var gameplans: [Gameplan]
+	@Environment(\.managedObjectContext) private var viewContext
+
+	@FetchRequest(
+		sortDescriptors: [NSSortDescriptor(keyPath: \Gameplan.createdAt, ascending: true)],
+		animation: .default) private var gameplans: FetchedResults<Gameplan>
 
 	private var activityFeed: (today: [Activity], future: [Activity]) {
 		let activities = gameplans.compactMap(\.nextOccurrence).sorted(by: { $0.date < $1.date })
@@ -100,20 +105,32 @@ struct HomeScreen: View {
 	}
 }
 
-#Preview {
-	let config = ModelConfiguration(isStoredInMemoryOnly: true)
-	let container = try! ModelContainer(for: Gameplan.self, configurations: config)
-
-	let gameplan = Gameplan(activityType: .personalPrayer)
-	gameplan.customSourceText = "Test source text"
-	gameplan.customSourceTitle = "Magnificat"
-	gameplan.frequency = .daily
-	gameplan.byDayOfWeek = .wednesday
-	container.mainContext.insert(gameplan)
-
-	@State var router = Router()
-
-	return HomeScreen(router: $router)
-		.modelContainer(container)
-		.environmentObject(Romcal.preview)
-}
+// #Preview {
+//	let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//	let container = try! ModelContainer(for: Gameplan.self, configurations: config)
+//
+//	let weekdays: [EKWeekday] = [.monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday]
+//
+//	[
+//		Gameplan(activityType: .personalPrayer),
+//		Gameplan(activityType: .personalPrayer),
+//		Gameplan(activityType: .scripture),
+//		Gameplan(activityType: .conjugalPrayer),
+//		Gameplan(activityType: .familyPrayer),
+//	].forEach {
+//		$0.timeOfDay = Date().addingTimeInterval(TimeInterval.random(in: 0...86400))
+//		$0.source = PrayerFormSettings().sources.randomElement()!
+//		$0.frequency = Bool.random() ? .daily : .weekly
+//		$0.byDayOfWeek = weekdays.randomElement()!
+//
+//		if $0.activityType == .scripture {
+//			$0.source = .dailyGospel
+//		}
+//
+//		container.mainContext.insert($0)
+//	}
+//
+//	return HomeScreen(router: .constant(Router.shared))
+//		.modelContainer(container)
+//		.environmentObject(Romcal.preview)
+// }

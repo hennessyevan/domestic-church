@@ -1,11 +1,3 @@
-//
-//  Gameplan.swift
-//  domestic-church
-//
-//  Created by Evan Hennessy on 2023-10-10.
-//
-//
-
 import EventKit
 import Foundation
 import RWMRecurrenceRule
@@ -84,24 +76,35 @@ func createRecurrenceRule(frequency: EKRecurrenceFrequency = .weekly, byDayOfWee
 
 private var defaultRule = createRecurrenceRule(frequency: .weekly, byDayOfWeek: .sunday)
 
-@Model
-public final class Gameplan {
-	private(set) var uuid = UUID()
-	var activityType: ActivityType
-	var rrule: String?
-	var timeOfDay: Date = Date.now
-	var source: Source
-	var createdAt: Date?
-	var customSourceText: String = ""
-	var customSourceTitle: String = ""
+extension Gameplan {
+	var uuid: UUID {
+		get { uuidRawValue ?? UUID() }
+		set { uuidRawValue = newValue }
+	}
 
-	init(activityType: ActivityType, rrule: String? = nil, source: Source? = nil) {
-		let settings = formSettingsForActivityType[activityType] ?? DefaultFormSettings()
+	var activityType: ActivityType {
+		get { ActivityType(rawValue: activityTypeRawValue ?? "scripture") ?? .scripture }
+		set { activityTypeRawValue = newValue.rawValue }
+	}
 
-		self.activityType = activityType
-		self.rrule = rrule
-		self.source = source ?? settings.sources.first ?? .custom
-		self.createdAt = Date()
+	var timeOfDay: Date {
+		get { timeOfDayRawValue ?? Date() }
+		set { timeOfDayRawValue = newValue }
+	}
+
+	var source: Source {
+		get { Source(rawValue: sourceRawValue ?? "dailyGospel") ?? .dailyGospel }
+		set { sourceRawValue = newValue.rawValue }
+	}
+
+	var customSourceText: String {
+		get { customSourceTextRawValue ?? "" }
+		set { customSourceTextRawValue = newValue }
+	}
+
+	var customSourceTitle: String {
+		get { customSourceTitleRawValue ?? "" }
+		set { customSourceTitleRawValue = newValue }
 	}
 
 	var rruleObject: EKRecurrenceRule {

@@ -12,15 +12,18 @@ import SystemColors
 
 @Observable
 class GameplanScreenViewModel {
-	var expandedId: PersistentIdentifier?
+	var expandedId: ObjectIdentifier?
 	var isNewItemDialogShown: Bool = false
 }
 
 struct GameplanView: View {
 	@Binding var router: Router
-	@Environment(\.modelContext) private var modelContext
+	@Environment(\.managedObjectContext) private var viewContext
 
-	@Query(sort: \Gameplan.createdAt, order: .forward, animation: .default) private var gameplans: [Gameplan]
+	@FetchRequest(
+		sortDescriptors: [NSSortDescriptor(keyPath: \Gameplan.createdAt, ascending: true)],
+		animation: .default
+	) private var gameplans: FetchedResults<Gameplan>
 
 	@State var viewModel = GameplanScreenViewModel()
 
@@ -66,7 +69,7 @@ struct GameplanView: View {
 			}
 			.confirmationDialog("What type?", isPresented: $viewModel.isNewItemDialogShown) {
 				ForEach(ActivityType.allCases) { activityType in
-					Button(activityType.rawValue.localized) { self.addGameplan(with: activityType) }
+					Button(activityType.rawValue.localized) { addGameplan(with: activityType) }
 				}
 			}
 			.background(Color.systemGroupedBackground)
@@ -85,6 +88,8 @@ struct GameplanView: View {
 
 	struct GameplanRow: View {
 		var gameplan: Gameplan
+
+		@Environment(\.managedObjectContext) private var viewContext
 
 		@State private var confirmingDelete = false
 		@State private var isLoaded = false
@@ -138,13 +143,26 @@ struct GameplanView: View {
 		}
 
 		private func deleteGameplan(gameplan: Gameplan) {
-			gameplan.modelContext?.delete(gameplan)
+			viewContext.delete(gameplan)
 		}
 	}
 
 	private func addGameplan(with activityType: ActivityType) {
-		let newGameplan = Gameplan(activityType: activityType)
-		modelContext.insert(newGameplan)
+		let settings = formSettingsForActivityType[activityType] ?? DefaultFormSettings()
+
+		let newGameplan = Gameplan(context: viewContext)
+		newGameplan.uuid = UUID()
+		newGameplan.activityType = activityType
+		newGameplan.source = settings.sources.first ?? .custom
+		newGameplan.timeOfDay = Date.now
+		newGameplan.createdAt = .now
+
+		do {
+			try viewContext.save()
+		} catch {
+			let nsError = error as NSError
+			fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+		}
 	}
 }
 
@@ -155,18 +173,18 @@ private let itemFormatter: DateFormatter = {
 	return formatter
 }()
 
-#Preview {
-	let config = ModelConfiguration(isStoredInMemoryOnly: true)
-	let container = try! ModelContainer(for: Gameplan.self, configurations: config)
-
-	[
-		Gameplan(activityType: .personalPrayer),
-		Gameplan(activityType: .scripture),
-		Gameplan(activityType: .conjugalPrayer),
-		Gameplan(activityType: .familyPrayer),
-	].forEach {
-		container.mainContext.insert($0)
-	}
-
-	return GameplanView(router: .constant(Router.shared)).modelContainer(container)
-}
+// #Preview {
+//	let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//	let container = try! ModelContainer(for: Gameplan.self, configurations: config)
+//
+//	[
+//		Gameplan(activityType: .personalPrayer),
+//		Gameplan(activityType: .scripture),
+//		Gameplan(activityType: .conjugalPrayer),
+//		Gameplan(activityType: .familyPrayer),
+//	].forEach {
+//		container.mainContext.insert($0)
+//	}
+//
+//	return GameplanView(router: .constant(Router.shared)).modelContainer(container)
+// }

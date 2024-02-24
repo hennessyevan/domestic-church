@@ -8,7 +8,7 @@
 import Foundation
 import NotificationCenter
 
-class NotificationHelper {
+enum NotificationHelper {
 	static func requestNotificationPermissions() {
 		UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, error in
 			if let error {
@@ -95,9 +95,9 @@ extension Gameplan {
 	
 	func printExistingNotifications() {
 		UNUserNotificationCenter.current().getPendingNotificationRequests { requests in
-			print(requests.count)
+			print("\(requests.count) notifications scheduled")
 			for request in requests {
-				print(request.identifier.description)
+				print("id: \(request.identifier.description)")
 			}
 		}
 	}

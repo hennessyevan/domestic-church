@@ -14,8 +14,9 @@ import SwiftUI
 private let SPACING: CGFloat = 8
 
 struct GameplanForm: View {
-	@Environment(\.modelContext) private var modelContext
-	@Bindable var gameplan: Gameplan
+	@ObservedObject var gameplan: Gameplan
+
+	@Environment(\.managedObjectContext) private var viewContext
 
 	@State private var showCustomSourceEditor = false
 
@@ -31,10 +32,9 @@ struct GameplanForm: View {
 			VStack(alignment: .leading, spacing: SPACING) {
 				Label("Frequency", systemImage: "clock.arrow.circlepath").labelStyle(.titleOnly).fontWeight(.medium)
 				Picker("Frequency", selection: $gameplan.frequency) {
-					ForEach([EKRecurrenceFrequency.daily, EKRecurrenceFrequency.weekly], id: \.self)
-						{ frequency in
-							Text(recurrenceFrequencyToString(frequency).capitalized).tag(frequency)
-						}
+					ForEach([EKRecurrenceFrequency.daily, EKRecurrenceFrequency.weekly], id: \.self) { frequency in
+						Text(recurrenceFrequencyToString(frequency).capitalized).tag(frequency)
+					}
 				}.pickerStyle(.segmented)
 			}
 
@@ -117,18 +117,37 @@ struct GameplanForm: View {
 			}
 		})
 		.tint(TYPE_COLORS[gameplan.activityType])
+		.onChange(of: [
+			gameplan.source.rawValue,
+			gameplan.rrule,
+			gameplan.timeOfDay.description,
+			gameplan.customSourceText,
+			gameplan.customSourceTitle,
+		]) {
+			save()
+		}
 		.onChange(of: [gameplan.rrule, gameplan.timeOfDay.description]) {
 			gameplan.scheduleNotification()
 		}
 	}
+
+	func save() {
+		if viewContext.hasChanges {
+			do {
+				try viewContext.save()
+			} catch {
+				print(error)
+			}
+		}
+	}
 }
 
-#Preview {
-	let config = ModelConfiguration(isStoredInMemoryOnly: true)
-	let container = try! ModelContainer(for: Gameplan.self, configurations: config)
-
-	let gameplan = Gameplan(activityType: .personalPrayer, source: .custom)
-	container.mainContext.insert(gameplan)
-
-	return GameplanForm(gameplan: gameplan)
-}
+// #Preview {
+//	let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//	let container = try! ModelContainer(for: Gameplan.self, configurations: config)
+//
+//	let gameplan = Gameplan(activityType: .personalPrayer, source: .custom)
+//	container.mainContext.insert(gameplan)
+//
+//	return GameplanForm(gameplan: gameplan)
+// }

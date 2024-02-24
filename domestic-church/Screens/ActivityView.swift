@@ -70,11 +70,22 @@ struct ActivityView: View {
 				}
 				.padding()
 				.padding(.bottom, 50)
-			}
+			}.environment(\.font, .system(.body, design: .serif))
+			
+			VStack {
+				Spacer()
+				HStack {
+					Spacer()
+					
+					Button("Done", systemImage: "checkmark") {}
+						.buttonStyle(BorderedProminentButtonStyle())
+						.clipShape(RoundedRectangle(cornerRadius: 25.0))
+				}
+			}.padding()
 		}
+		.tint(TYPE_COLORS[activity.activityType] ?? Color.label)
 		.background(Color.systemGray6)
 		.navigationTitle(title)
-		.environment(\.font, .system(.body, design: .serif))
 	}
 }
 
@@ -83,9 +94,7 @@ struct ActivityView: View {
 		id: UUID(),
 		activityType: .conjugalPrayer,
 		date: .now,
-		source: .comeHolySpirit,
-		customSourceText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-		customSourceTitle: "Magnificat"
+		source: .comeHolySpirit
 	)
 
 	return NavigationView {

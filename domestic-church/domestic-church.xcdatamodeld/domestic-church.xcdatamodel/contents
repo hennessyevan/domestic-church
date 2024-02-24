@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="ActivityEntry" representedClassName="ActivityEntry" syncable="YES">
+        <relationship name="gameplan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Gameplan" inverseName="activityEntries" inverseEntity="Gameplan"/>
+    </entity>
+    <entity name="Family" representedClassName="Family" syncable="YES">
+        <relationship name="gameplans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Gameplan" inverseName="family" inverseEntity="Gameplan"/>
+    </entity>
+    <entity name="Gameplan" representedClassName="Gameplan" syncable="YES">
+        <attribute name="activityTypeRawValue" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="customSourceTextRawValue" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="customSourceTitleRawValue" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="rrule" optional="YES" attributeType="String"/>
+        <attribute name="sourceRawValue" optional="YES" attributeType="String"/>
+        <attribute name="timeOfDayRawValue" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" derived="YES" derivationExpression="now()" usesScalarValueType="NO"/>
+        <attribute name="uuidRawValue" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="activityEntries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivityEntry" inverseName="gameplan" inverseEntity="ActivityEntry"/>
+        <relationship name="family" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Family" inverseName="gameplans" inverseEntity="Family"/>
+    </entity>
+</model>

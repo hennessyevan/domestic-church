@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftData
 
 struct Activity: Identifiable, Equatable, Hashable {
 	var id: UUID

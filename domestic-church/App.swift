@@ -11,9 +11,11 @@ import SwiftUI
 
 @main
 struct domestic_churchApp: App {
+	let persistenceController = PersistenceController.shared
+
 	@StateObject var romcal = Romcal()
 
-	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+//	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
 	@State var router = Router.shared
 	@State private var activeTab: Tab = .home
@@ -39,34 +41,34 @@ struct domestic_churchApp: App {
 				activeTab = newTab
 			}
 			.environmentObject(romcal)
-			.modelContainer(for: [Gameplan.self])
+			.environment(\.managedObjectContext, persistenceController.container.viewContext)
 		}
 	}
 }
 
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-		print("Notification tapped for activityID: \(response.notification.request.identifier)")
-
-		// fetch gameplan by id from CoreData
-		let container = try! ModelContainer(for: Gameplan.self)
-		let context = container.mainContext
-
-		var fetchDescriptor = FetchDescriptor<Gameplan>()
-		fetchDescriptor.fetchLimit = 1
-		let gameplans = try! context.fetch(fetchDescriptor)
-		let gameplan = gameplans.first
-
-		if let activity = gameplan?.nextOccurrence {
-			Router.shared.goToActivity(activity)
-		}
-
-		completionHandler()
-	}
-
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		UNUserNotificationCenter.current().delegate = self
-		// Your other setup code
-		return true
-	}
-}
+// class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+//	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//		print("Notification tapped for activityID: \(response.notification.request.identifier)")
+//
+//		// fetch gameplan by id from CoreData
+//		let container = try! ModelContainer(for: Gameplan.self)
+//		let context = container.mainContext
+//
+//		var fetchDescriptor = FetchDescriptor<Gameplan>()
+//		fetchDescriptor.fetchLimit = 1
+//		let gameplans = try! context.fetch(fetchDescriptor)
+//		let gameplan = gameplans.first
+//
+//		if let activity = gameplan?.nextOccurrence {
+//			Router.shared.goToActivity(activity)
+//		}
+//
+//		completionHandler()
+//	}
+//
+//	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//		UNUserNotificationCenter.current().delegate = self
+//		// Your other setup code
+//		return true
+//	}
+// }
